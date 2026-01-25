@@ -51,12 +51,7 @@ export function ServiceCard({
   return (
     <Link href={linkHref} className="block group">
       <Card className={cn("h-full transition-all hover:shadow-xl hover:border-gold-300", className)}>
-        <CardHeader className="pb-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gold-100 text-gold-700 group-hover:bg-gold-700 group-hover:text-white transition-colors">
-            <Icon className="h-7 w-7" />
-          </div>
-        </CardHeader>
-        <CardContent className="space-y-3">
+        <CardContent className="space-y-3 pt-6">
           <h3 className="text-xl font-bold text-charcoal-900 group-hover:text-gold-700 transition-colors">
             {service.name}
           </h3>

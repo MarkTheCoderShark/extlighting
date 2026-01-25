@@ -45,7 +45,7 @@ export function ThemeShowcase({ className }: ThemeShowcaseProps) {
           subtitleClassName="text-charcoal-300"
         />
 
-        <div className="mt-12 flex flex-col lg:flex-row gap-6 lg:gap-8 lg:items-center">
+        <div className="mt-12 flex flex-col lg:flex-row gap-6 lg:gap-8 lg:items-start">
           {/* Theme Buttons - Vertical stack on left */}
           <div className="lg:w-48 shrink-0 order-2 lg:order-1">
             <div className="relative pt-10">
@@ -98,7 +98,7 @@ export function ThemeShowcase({ className }: ThemeShowcaseProps) {
           </div>
 
           {/* Image Display */}
-          <div className="relative flex-1 aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2">
+          <div className="relative flex-1 aspect-[16/7] rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2">
             {themes.map((theme) => (
               <div
                 key={theme.id}
