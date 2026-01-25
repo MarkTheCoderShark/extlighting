@@ -45,9 +45,60 @@ export function ThemeShowcase({ className }: ThemeShowcaseProps) {
           subtitleClassName="text-charcoal-300"
         />
 
-        <div className="mt-12">
+        <div className="mt-12 flex flex-col lg:flex-row gap-6 lg:gap-8 lg:items-center">
+          {/* Theme Buttons - Vertical stack on left */}
+          <div className="lg:w-48 shrink-0 order-2 lg:order-1">
+            <div className="relative pt-10">
+              {/* Try Me label */}
+              <span
+                className="absolute top-0 left-4 text-gold-400 text-3xl flex items-center gap-2 whitespace-nowrap"
+                style={{ fontFamily: 'var(--font-caveat), Caveat, cursive' }}
+              >
+                Try me!
+                <svg
+                  className="w-5 h-5 animate-bounce"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </svg>
+              </span>
+              <div className="flex flex-row lg:flex-col gap-4">
+                {themes.map((theme) => (
+                  <button
+                    key={theme.id}
+                    onClick={() => setActiveTheme(theme.id)}
+                    className={`
+                      flex-1 lg:flex-none py-4 px-4 rounded-xl
+                      transition-all duration-300
+                      border-2 text-center
+                      ${
+                        activeTheme === theme.id
+                          ? "bg-gold-500 text-white border-gold-400 shadow-lg shadow-gold-500/30"
+                          : "bg-white/10 text-white/90 hover:bg-white/20 backdrop-blur-sm border-white/30 hover:border-white/50"
+                      }
+                    `}
+                  >
+                    <span
+                      style={{ fontFamily: 'var(--font-caveat), Caveat, cursive' }}
+                      className="text-2xl"
+                    >
+                      {theme.label}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Image Display */}
-          <div className="relative aspect-[16/9] max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative flex-1 aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2">
             {themes.map((theme) => (
               <div
                 key={theme.id}
@@ -65,57 +116,6 @@ export function ThemeShowcase({ className }: ThemeShowcaseProps) {
                 />
               </div>
             ))}
-          </div>
-
-          {/* Theme Buttons */}
-          <div className="mt-16 max-w-3xl mx-auto">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {themes.map((theme, index) => (
-                <button
-                  key={theme.id}
-                  onClick={() => setActiveTheme(theme.id)}
-                  className={`
-                    relative py-4 px-4 rounded-xl
-                    transition-all duration-300
-                    border-2
-                    ${
-                      activeTheme === theme.id
-                        ? "bg-gold-500 text-white border-gold-400 shadow-lg shadow-gold-500/30 scale-105"
-                        : "bg-white/10 text-white/90 hover:bg-white/20 backdrop-blur-sm border-white/30 hover:border-white/50"
-                    }
-                  `}
-                >
-                  {/* Try Me label on first box */}
-                  {index === 0 && (
-                    <span
-                      className="absolute -top-10 left-1/2 -translate-x-1/2 text-gold-400 text-4xl flex items-center gap-2 whitespace-nowrap"
-                      style={{ fontFamily: 'var(--font-caveat), Caveat, cursive' }}
-                    >
-                      Try me!
-                      <svg
-                        className="w-6 h-6 animate-bounce -rotate-45"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                        />
-                      </svg>
-                    </span>
-                  )}
-                  <span
-                    style={{ fontFamily: 'var(--font-caveat), Caveat, cursive' }}
-                    className="text-2xl"
-                  >
-                    {theme.label}
-                  </span>
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </div>

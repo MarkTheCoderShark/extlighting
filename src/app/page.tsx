@@ -39,7 +39,7 @@ const howItWorks = [
   },
   {
     step: 2,
-    title: "Professional Design",
+    title: "Pro Design",
     description:
       "Our designers create a detailed lighting layout that enhances your property's architecture while meeting your aesthetic and functional goals.",
     icon: Palette,
@@ -115,19 +115,19 @@ export default function HomePage() {
             title={<>How It <HighlightedText>Works</HighlightedText></>}
             subtitle="From consultation to installation, we make the process simple and stress-free."
           />
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4 relative">
             {howItWorks.map((item) => (
               <div
                 key={item.step}
-                className="relative rounded-xl bg-white p-6 shadow-sm border border-charcoal-100"
+                className="rounded-xl bg-white p-6 shadow-sm border border-charcoal-100 text-center"
               >
-                <div className="absolute -top-4 left-6 flex h-8 w-8 items-center justify-center rounded-full bg-gold-700 text-sm font-bold text-white">
+                <span
+                  className="text-gold-500 leading-none flex items-center justify-center w-14 h-14 rounded-full border-2 border-gold-500 mb-4 mx-auto"
+                  style={{ fontFamily: 'var(--font-caveat), Caveat, cursive', fontSize: '2.5rem' }}
+                >
                   {item.step}
-                </div>
-                <div className="mt-4 mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gold-100 text-gold-700">
-                  <item.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-lg font-bold text-charcoal-900 mb-2">
+                </span>
+                <h3 className="text-base font-bold text-charcoal-900 mb-2 whitespace-nowrap">
                   {item.title}
                 </h3>
                 <p className="text-charcoal-600 text-sm leading-relaxed">
