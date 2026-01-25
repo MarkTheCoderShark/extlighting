@@ -19,9 +19,11 @@
 ## Homepage Content
 
 ### Hero Section
-**Headline**: "Sacramento's Premier Permanent Exterior Lighting"
+**Headline**: "Permanent Outdoor Lights"
 
-**Subheadline**: "Transform your home with stunning LED lights that stay up year-round. No more ladders, no more tangled strings—just beautiful lighting at the touch of a button."
+**Subheadline**: "Professional LED lighting installation for Sacramento, Roseville & Rocklin homes. App-controlled lights that stay up year-round—no more ladders, no more tangled strings."
+
+**SEO Note**: Primary keyword "permanent outdoor lights" (8.1k monthly searches) in H1. Location keywords in subheadline for local SEO.
 
 **Trust Bar** (below hero):
 - "Lifetime Warranty"

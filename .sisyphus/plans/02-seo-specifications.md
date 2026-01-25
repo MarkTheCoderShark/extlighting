@@ -2,29 +2,49 @@
 
 ## SEO Strategy Overview
 
+### Keyword Research Data (January 2025)
+| Keyword | Monthly Volume | Difficulty | Priority |
+|---------|---------------|------------|----------|
+| permanent Christmas lights | 22,000 | 25% | HIGH - Dedicated page |
+| permanent outdoor lights | 8,100 | 44% | HIGH - Homepage H1 |
+| permanent house lights | 2,400 | 34% | MEDIUM - Body copy |
+| permanent outdoor lighting | 1,800 | 18% | HIGH - Easy to rank |
+| year round Christmas lights | 1,000 | - | MEDIUM |
+| LED exterior lights | 720 | 20% | MEDIUM |
+| permanent LED lighting | 320 | - | LOW |
+| permanent exterior lighting | 260 | - | LOW |
+
 ### Primary Keywords (High Priority)
 | Keyword | Target Page | Search Intent |
 |---------|-------------|---------------|
-| permanent lighting sacramento | Homepage | Transactional |
-| permanent exterior lighting | Homepage, Services | Informational |
-| permanent LED lighting installation | Services | Transactional |
-| exterior house lighting sacramento | Homepage | Transactional |
+| permanent outdoor lights | Homepage | Transactional |
+| permanent Christmas lights | /permanent-christmas-lights | Seasonal/Transactional |
+| permanent outdoor lighting | How It Works page | Informational |
+| LED exterior lights | Services | Informational |
 | [city] permanent lighting | Location pages | Local |
 
 ### Secondary Keywords
 | Keyword | Target Page |
 |---------|-------------|
-| year round outdoor lighting | Services |
-| app controlled house lights | Services |
-| permanent holiday lights | Residential |
-| commercial building lighting | Commercial |
+| permanent house lights | Homepage, Services |
+| year round Christmas lights | Christmas lights page |
+| app controlled outdoor lights | Services, Features |
+| permanent holiday lights | Christmas lights page |
 | roofline LED lights | Residential |
 
 ### Long-Tail Keywords (Location-Specific)
-- "permanent lighting installation roseville ca"
-- "exterior LED lights el dorado hills"
-- "commercial lighting folsom"
-- "residential outdoor lighting rocklin"
+- "permanent outdoor lights sacramento"
+- "permanent Christmas lights roseville"
+- "permanent lighting installation rocklin"
+- "LED exterior lights el dorado hills"
+- "residential outdoor lighting folsom"
+
+### LSI/Semantic Keywords (Use Naturally in Content)
+- outdoor lighting design, accent lighting, landscape lighting
+- LED bulbs, low-voltage lighting, weatherproof
+- app-controlled, smart lighting, color-changing
+- professional installation, licensed contractor
+- year-round, all-weather, durable
 
 ---
 
@@ -36,6 +56,8 @@ extlighting.com/
 ├── /services
 │   ├── /services/residential
 │   └── /services/commercial
+├── /permanent-christmas-lights          # NEW: High-volume keyword page (22k searches)
+├── /how-permanent-outdoor-lighting-works # NEW: Informational/low difficulty
 ├── /locations
 │   ├── /locations/sacramento
 │   │   ├── /locations/sacramento/residential
@@ -65,12 +87,12 @@ extlighting.com/
 ### Homepage
 ```tsx
 export const metadata: Metadata = {
-  title: "Permanent Exterior LED Lighting Sacramento | EXT Lighting",
-  description: "Sacramento's premier permanent exterior lighting installation. Year-round LED lights for homes & businesses. App-controlled, lifetime warranty. Get a free quote today!",
-  keywords: ["permanent lighting", "exterior LED lights", "Sacramento lighting installation"],
+  title: "Permanent Outdoor Lights Sacramento | Professional Installation | EXT Lighting",
+  description: "Professional permanent outdoor lights installation in Sacramento, Roseville & Rocklin. App-controlled LED lighting year-round. Free consultation, lifetime warranty.",
+  keywords: ["permanent outdoor lights", "permanent Christmas lights", "LED exterior lights", "Sacramento lighting installation"],
   openGraph: {
-    title: "Permanent Exterior LED Lighting Sacramento | EXT Lighting",
-    description: "Transform your home with permanent LED lighting. No more seasonal hassle.",
+    title: "Permanent Outdoor Lights Sacramento | EXT Lighting",
+    description: "Professional permanent outdoor lighting installation. App-controlled, year-round LED lights for your home.",
     type: "website",
     locale: "en_US",
     url: "https://extlighting.com",
@@ -79,8 +101,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Permanent Exterior LED Lighting Sacramento",
-    description: "Sacramento's premier permanent lighting installation.",
+    title: "Permanent Outdoor Lights Sacramento",
+    description: "Professional permanent lighting installation for Sacramento homes.",
   },
   alternates: {
     canonical: "https://extlighting.com",
@@ -356,7 +378,7 @@ import { locations } from '@/lib/data/locations';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://extlighting.com';
-  
+
   // Static pages
   const staticPages = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
@@ -370,14 +392,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/quote`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   ];
-  
+
   // Location pages
   const locationPages = locations.flatMap(location => [
     { url: `${baseUrl}/locations/${location.slug}`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/locations/${location.slug}/residential`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/locations/${location.slug}/commercial`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   ]);
-  
+
   return [...staticPages, ...locationPages];
 }
 ```

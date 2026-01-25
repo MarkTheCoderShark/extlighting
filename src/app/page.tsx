@@ -335,20 +335,24 @@ export default function HomePage() {
                 Permanent exterior lighting changes everything. Our professionally installed LED systems stay up year-round, ready to illuminate your home for any occasion at the touch of a button.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-charcoal-800 to-charcoal-900 flex items-center justify-center">
-              <div className="text-center p-8">
-                <Home className="h-16 w-16 text-gold-400 mx-auto mb-4" />
-                <p className="text-charcoal-400 text-sm">Home exterior at twilight</p>
-              </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/gallery/residential-6.png"
+                alt="Two-story home with warm white eave and roofline lighting at dusk"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
           <div className="mt-20 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-gold-600 to-gold-800 flex items-center justify-center lg:order-1">
-              <div className="text-center p-8">
-                <Smartphone className="h-16 w-16 text-white mx-auto mb-4" />
-                <p className="text-gold-100 text-sm">App control demonstration</p>
-              </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden lg:order-1">
+              <Image
+                src="/images/app-control.png"
+                alt="Hand holding smartphone with lighting control app in front of illuminated home"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="lg:order-2">
               <h3 className="text-2xl font-bold text-charcoal-900 mb-4">
@@ -417,11 +421,13 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-charcoal-100 to-charcoal-200 flex items-center justify-center">
-              <div className="text-center p-8">
-                <Users className="h-16 w-16 text-charcoal-400 mx-auto mb-4" />
-                <p className="text-charcoal-500 text-sm">Our local team</p>
-              </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/gallery/residential-10.png"
+                alt="Mid-century modern home with cool white roofline LED lighting"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 

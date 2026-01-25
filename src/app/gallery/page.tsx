@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Sparkles, Users } from "lucide-react";
 import { CTAButton } from "@/components/cta-button";
 import { SectionHeading, HighlightedText } from "@/components/section-heading";
@@ -15,11 +16,21 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-charcoal-900 to-charcoal-800 section pt-28 md:pt-36">
-        <div className="container">
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-28 md:pt-36">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/residential-11.png"
+            alt="Modern farmhouse with pink and purple accent lighting"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="container relative z-10 py-16">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-white mb-6">Our Work: Permanent Lighting Gallery</h1>
-            <p className="text-lg text-charcoal-300 md:text-xl">
+            <p className="text-lg text-white/80 md:text-xl">
               Explore real installations from homes and businesses across the
               Sacramento region. See how permanent exterior lighting transforms
               properties from ordinary to extraordinary.
@@ -35,27 +46,38 @@ export default function GalleryPage() {
             title={<>Before &amp; After <HighlightedText>Transformations</HighlightedText></>}
             subtitle="Drag the slider to see the dramatic difference permanent lighting makes."
           />
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div>
               <BeforeAfterSlider
-                beforeImage="/images/gallery/before-1.jpg"
-                afterImage="/images/gallery/after-1.jpg"
-                beforeAlt="Home before permanent lighting installation"
-                afterAlt="Same home after permanent lighting installation"
+                beforeImage="/images/gallery/before.png"
+                afterImage="/images/gallery/after.png"
+                beforeAlt="Ranch home at dusk before permanent lighting installation"
+                afterAlt="Same ranch home with warm white roofline lighting installed"
               />
               <p className="mt-4 text-center text-sm text-charcoal-600">
-                Roseville Residence - Roofline & Accent Lighting
+                Sacramento Ranch - Warm White Roofline
               </p>
             </div>
             <div>
               <BeforeAfterSlider
-                beforeImage="/images/gallery/before-2.jpg"
-                afterImage="/images/gallery/after-2.jpg"
-                beforeAlt="Restaurant before permanent lighting"
-                afterAlt="Restaurant after permanent lighting"
+                beforeImage="/images/gallery/before2.png"
+                afterImage="/images/gallery/after2.png"
+                beforeAlt="Cape cod home at dusk before lighting installation"
+                afterAlt="Same cape cod home with colorful RGB trim lighting"
               />
               <p className="mt-4 text-center text-sm text-charcoal-600">
-                Sacramento Restaurant - Commercial Exterior
+                Roseville Cape Cod - RGB Color-Changing
+              </p>
+            </div>
+            <div>
+              <BeforeAfterSlider
+                beforeImage="/images/gallery/before3.png"
+                afterImage="/images/gallery/after3.png"
+                beforeAlt="Modern luxury home at dusk before roofline lighting"
+                afterAlt="Same modern home with sleek white roofline accent lighting"
+              />
+              <p className="mt-4 text-center text-sm text-charcoal-600">
+                El Dorado Hills Modern - White Roofline Accents
               </p>
             </div>
           </div>
@@ -82,7 +104,7 @@ export default function GalleryPage() {
             title={<>Every Project Tells a <HighlightedText>Story</HighlightedText></>}
             subtitle="Behind every installation is a homeowner or business owner who chose to transform their property."
           />
-          
+
           <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div>
               <h3 className="text-2xl font-bold text-charcoal-900 mb-4">
@@ -126,8 +148,8 @@ export default function GalleryPage() {
                 architecture, and their goals.
               </p>
               <p className="text-charcoal-600 leading-relaxed">
-                The result is always a custom lighting design that looks like 
-                it was always meant to be there—enhancing, not competing with, 
+                The result is always a custom lighting design that looks like
+                it was always meant to be there—enhancing, not competing with,
                 your property&apos;s natural beauty.
               </p>
             </div>

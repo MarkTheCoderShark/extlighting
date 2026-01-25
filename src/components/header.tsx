@@ -46,7 +46,7 @@ export function Header() {
               scrolled ? "text-charcoal-900" : "text-white"
             )}
           >
-            EXT<span className="text-gold-400">Lighting</span>
+            EXT<span className="text-gold-400 text-2xl md:text-3xl" style={{ fontFamily: 'var(--font-caveat), Caveat, cursive' }}>Lighting</span>
           </span>
         </Link>
 
