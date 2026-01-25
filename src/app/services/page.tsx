@@ -10,6 +10,7 @@ import { FAQSection } from "@/components/faq-section";
 import { TeamSection } from "@/components/team-section";
 import { CTASection } from "@/components/cta-section";
 import { ServiceAreasSection } from "@/components/service-areas-section";
+import { ThemeShowcase } from "@/components/theme-showcase";
 import { services } from "@/lib/data/services";
 import { getFAQItems } from "@/lib/data/faq";
 import Link from "next/link";
@@ -143,6 +144,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <ThemeShowcase />
 
       <section className="section bg-background">
         <div className="container">

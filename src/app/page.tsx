@@ -18,14 +18,13 @@ import { CTAButton } from "@/components/cta-button";
 import { SectionHeading, HighlightedText } from "@/components/section-heading";
 import { TrustBadges } from "@/components/trust-badge";
 import { ServiceCard } from "@/components/service-card";
-import { TestimonialCard } from "@/components/testimonial-card";
 import { LocationGrid } from "@/components/location-card";
 import { HeroSwitcher } from "@/components/hero-switcher";
 import { ThemeShowcase } from "@/components/theme-showcase";
+import { TestimonialsSection } from "@/components/testimonials-section";
 import { CTASection } from "@/components/cta-section";
 import { services } from "@/lib/data/services";
 import { locations } from "@/lib/data/locations";
-import { getFeaturedTestimonials } from "@/lib/data/testimonials";
 import { getFeaturedGalleryImages } from "@/lib/data/gallery";
 import { business } from "@/lib/data/business";
 
@@ -100,7 +99,6 @@ const benefits = [
 ];
 
 export default function HomePage() {
-  const featuredTestimonials = getFeaturedTestimonials(3);
   const featuredLocations = locations.slice(0, 6);
   const featuredGalleryImages = getFeaturedGalleryImages(6);
 
@@ -244,20 +242,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section bg-background">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Testimonials"
-            title={<>What Our Customers <HighlightedText>Say</HighlightedText></>}
-            subtitle="Don't just take our word for it—hear from homeowners and businesses across Sacramento."
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {featuredTestimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
 
       <section className="section bg-background-alt">
         <div className="container">
