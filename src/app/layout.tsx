@@ -21,19 +21,20 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://extlighting.com"),
   title: {
-    default: "Permanent Exterior LED Lighting Sacramento | EXT Lighting",
+    default: "Permanent Outdoor Lights Sacramento | Professional Installation | EXT Lighting",
     template: "%s | EXT Lighting",
   },
   description:
-    "Sacramento's premier permanent exterior LED lighting installation. Transform your home or business with year-round elegance. App-controlled colors, lifetime warranty. Free quotes!",
+    "Professional permanent outdoor lights installation in Sacramento, Roseville & Rocklin. App-controlled LED lighting year-round. Free consultation, lifetime warranty.",
   keywords: [
-    "permanent exterior lighting",
-    "LED lighting installation",
-    "Sacramento lighting",
-    "outdoor lighting",
-    "holiday lighting",
-    "architectural lighting",
-    "landscape lighting",
+    "permanent outdoor lights",
+    "permanent Christmas lights",
+    "permanent house lights",
+    "LED exterior lights",
+    "Sacramento lighting installation",
+    "Roseville permanent lighting",
+    "Rocklin outdoor lighting",
+    "year round outdoor lighting",
   ],
   authors: [{ name: business.name }],
   creator: business.name,
@@ -42,15 +43,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://extlighting.com",
     siteName: business.name,
-    title: "Permanent Exterior LED Lighting Sacramento | EXT Lighting",
+    title: "Permanent Outdoor Lights Sacramento | EXT Lighting",
     description:
-      "Sacramento's premier permanent exterior LED lighting installation. Transform your home or business with year-round elegance.",
+      "Professional permanent outdoor lights installation. App-controlled, year-round LED lighting for your home.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Permanent Exterior LED Lighting Sacramento | EXT Lighting",
+    title: "Permanent Outdoor Lights Sacramento | EXT Lighting",
     description:
-      "Sacramento's premier permanent exterior LED lighting installation. Transform your home or business with year-round elegance.",
+      "Professional permanent outdoor lights installation. App-controlled, year-round LED lighting for your home.",
   },
   robots: {
     index: true,

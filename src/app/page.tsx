@@ -121,15 +121,12 @@ export default function HomePage() {
               Sacramento&apos;s #1 Rated
             </p>
             <h1 className="text-white mb-6 leading-[1.1] drop-shadow-xl [text-shadow:_0_4px_12px_rgb(0_0_0_/_50%)]">
-              Permanent Exterior
-              <span className="block text-gold-400 [text-shadow:_0_4px_12px_rgb(0_0_0_/_60%)]">
-                Lighting Installation
-              </span>
+              Permanent Outdoor Lights
             </h1>
             <p className="text-lg text-white/90 md:text-xl mb-8 leading-relaxed drop-shadow-md [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
-              Transform your home with stunning LED lighting that stays up
-              year-round. Control colors from your phone for holidays, events,
-              or everyday elegance—no ladders, no hassle.
+              Professional LED lighting installation for Sacramento, Roseville &amp; Rocklin homes.
+              App-controlled permanent house lights that stay up year-round—no ladders, no hassle,
+              just beautiful lighting at the touch of a button.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
               <CTAButton href="/quote" size="lg">
