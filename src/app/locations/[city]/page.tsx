@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin, CheckCircle, Home, Building2 } from "lucide-react";
 import { CTAButton } from "@/components/cta-button";
 import { SectionHeading } from "@/components/section-heading";
@@ -17,6 +18,17 @@ import { services } from "@/lib/data/services";
 import { business } from "@/lib/data/business";
 import { getFAQItems } from "@/lib/data/faq";
 import { getFeaturedTestimonials } from "@/lib/data/testimonials";
+
+// Hero background images that rotate based on location
+const heroImages = [
+  "/images/gallery/residential-6.png",
+  "/images/gallery/residential-7.png",
+  "/images/gallery/residential-8.png",
+  "/images/gallery/residential-9.png",
+  "/images/gallery/residential-10.png",
+  "/images/gallery/residential-11.png",
+  "/images/gallery/residential-12.png",
+];
 
 interface PageProps {
   params: Promise<{ city: string }>;
@@ -54,6 +66,10 @@ export default async function CityPage({ params }: PageProps) {
   const faqs = getFAQItems().slice(0, 4);
   const testimonials = getFeaturedTestimonials(2);
 
+  // Get a consistent hero image based on location index
+  const locationIndex = locations.findIndex(l => l.slug === city);
+  const heroImage = heroImages[locationIndex % heroImages.length];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -83,8 +99,21 @@ export default async function CityPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="bg-gradient-to-br from-charcoal-900 to-charcoal-800 section pt-28 md:pt-36">
-        <div className="container">
+      <section className="relative section pt-28 md:pt-36 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src={heroImage}
+            alt={`Permanent exterior lighting in ${location.name}`}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="container relative z-10">
           <BreadcrumbNav
             items={[
               { label: "Locations", href: "/locations" },
@@ -129,7 +158,7 @@ export default async function CityPage({ params }: PageProps) {
             ))}
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <Link 
+            <Link
               href={`/locations/${location.slug}/residential`}
               className="group flex items-center gap-4 rounded-xl bg-gold-50 border border-gold-200 p-6 hover:bg-gold-100 transition-colors"
             >
@@ -144,7 +173,7 @@ export default async function CityPage({ params }: PageProps) {
               </div>
               <ArrowRight className="h-5 w-5 text-gold-700" />
             </Link>
-            <Link 
+            <Link
               href={`/locations/${location.slug}/commercial`}
               className="group flex items-center gap-4 rounded-xl bg-charcoal-50 border border-charcoal-200 p-6 hover:bg-charcoal-100 transition-colors"
             >
@@ -228,7 +257,7 @@ export default async function CityPage({ params }: PageProps) {
         </div>
       </section>
 
-      <ProcessSection 
+      <ProcessSection
         title={`How We Work in ${location.name}`}
         subtitle="From your first call to enjoying your new lighting, here's what to expect."
         variant="cards"
@@ -248,22 +277,22 @@ export default async function CityPage({ params }: PageProps) {
                   exterior lighting can transform how you experience your property.
                 </p>
                 <p>
-                  Our team has installed permanent lighting systems on hundreds of 
+                  Our team has installed permanent lighting systems on hundreds of
                   properties throughout {location.county}, and we bring that expertise
                   to every {location.name} project. We understand the local climate,
                   HOA requirements, and architectural styles that make this area unique.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link 
-                  href="/services/residential" 
+                <Link
+                  href="/services/residential"
                   className="text-gold-700 hover:text-gold-800 font-medium inline-flex items-center gap-1"
                 >
                   Learn about residential <ArrowRight className="h-4 w-4" />
                 </Link>
                 <span className="text-charcoal-300">|</span>
-                <Link 
-                  href="/services/commercial" 
+                <Link
+                  href="/services/commercial"
                   className="text-gold-700 hover:text-gold-800 font-medium inline-flex items-center gap-1"
                 >
                   Learn about commercial <ArrowRight className="h-4 w-4" />
@@ -320,7 +349,7 @@ export default async function CityPage({ params }: PageProps) {
         </section>
       )}
 
-      <FAQSection 
+      <FAQSection
         faqs={faqs}
         title={`Common Questions in ${location.name}`}
         subtitle="Answers to frequently asked questions about permanent lighting."
@@ -349,7 +378,7 @@ export default async function CityPage({ params }: PageProps) {
         </section>
       )}
 
-      <CTASection 
+      <CTASection
         title={`Ready to Transform Your ${location.name} Property?`}
         subtitle={`Join your neighbors in ${location.name} who have already discovered the beauty of permanent exterior lighting.`}
         variant="gold"

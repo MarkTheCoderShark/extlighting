@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Sparkles, Users } from "lucide-react";
 import { CTAButton } from "@/components/cta-button";
+import { CTASection } from "@/components/cta-section";
 import { SectionHeading, HighlightedText } from "@/components/section-heading";
 import { ImageGallery } from "@/components/image-gallery";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
@@ -122,20 +122,24 @@ export default function GalleryPage() {
                 at the touch of a button.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-gold-600 to-gold-800 flex items-center justify-center">
-              <div className="text-center p-8">
-                <Sparkles className="h-16 w-16 text-white mx-auto mb-4" />
-                <p className="text-gold-100 text-sm">Transformation in progress</p>
-              </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/gallery/residential-8.png"
+                alt="Stunning home transformation with permanent LED lighting"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
           <div className="mt-20 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-charcoal-800 to-charcoal-900 flex items-center justify-center lg:order-1">
-              <div className="text-center p-8">
-                <Users className="h-16 w-16 text-gold-400 mx-auto mb-4" />
-                <p className="text-charcoal-400 text-sm">Expert design consultation</p>
-              </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden lg:order-1">
+              <Image
+                src="/images/gallery/residential-9.png"
+                alt="Professional lighting design with attention to detail"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="lg:order-2">
               <h3 className="text-2xl font-bold text-charcoal-900 mb-4">
@@ -194,18 +198,10 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="bg-gold-700 section">
-        <div className="container text-center">
-          <h2 className="text-white mb-4">Want Results Like These?</h2>
-          <p className="mx-auto max-w-2xl text-lg text-gold-100 mb-8">
-            Your property could be our next stunning transformation. Schedule
-            your free consultation and discover the possibilities.
-          </p>
-          <CTAButton href="/quote" variant="secondary" size="lg">
-            Get Your Free Quote
-          </CTAButton>
-        </div>
-      </section>
+      <CTASection
+        title="Want Results Like These?"
+        subtitle="Your property could be our next stunning transformation. Schedule your free consultation and discover the possibilities."
+      />
     </>
   );
 }

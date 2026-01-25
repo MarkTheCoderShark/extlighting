@@ -21,6 +21,8 @@ import { ServiceCard } from "@/components/service-card";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { LocationGrid } from "@/components/location-card";
 import { HeroSwitcher } from "@/components/hero-switcher";
+import { ThemeShowcase } from "@/components/theme-showcase";
+import { CTASection } from "@/components/cta-section";
 import { services } from "@/lib/data/services";
 import { locations } from "@/lib/data/locations";
 import { getFeaturedTestimonials } from "@/lib/data/testimonials";
@@ -136,6 +138,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ThemeShowcase />
 
       <section className="section bg-background-alt">
         <div className="container">
@@ -425,31 +429,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-gold-700 section">
-        <div className="container text-center">
-          <h2 className="text-white mb-4">
-            Ready to Transform Your Property?
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-gold-100 mb-8">
-            Get a free, no-obligation quote and see how permanent exterior
-            lighting can enhance your home or business. Most consultations take
-            less than 30 minutes.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <CTAButton href="/quote" variant="secondary" size="lg">
-              Get Your Free Quote
-            </CTAButton>
-            <CTAButton
-              href={`tel:${business.phoneRaw}`}
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-gold-700"
-            >
-              Call {business.phone}
-            </CTAButton>
-          </div>
-        </div>
-      </section>
+      <CTASection />
     </>
   );
 }

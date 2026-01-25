@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { CTAButton } from "@/components/cta-button";
 import { SectionHeading, HighlightedText } from "@/components/section-heading";
@@ -66,8 +67,21 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-charcoal-900 to-charcoal-800 section pt-28 md:pt-36">
-        <div className="container">
+      <section className="relative section pt-28 md:pt-36 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/residential-7.png"
+            alt="Professional permanent exterior lighting installation"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-white mb-6">
               Professional Permanent Exterior Lighting Services
@@ -201,7 +215,7 @@ export default function ServicesPage() {
 
       <TeamSection />
 
-      <FAQSection 
+      <FAQSection
         faqs={faqs}
         title="Service FAQs"
         subtitle="Common questions about our permanent lighting services."
@@ -209,13 +223,13 @@ export default function ServicesPage() {
         columns={2}
       />
 
-      <ServiceAreasSection 
+      <ServiceAreasSection
         title="Service Areas"
         subtitle="We proudly serve communities throughout the greater Sacramento region."
         maxLocations={12}
       />
 
-      <CTASection 
+      <CTASection
         title="Ready to Get Started?"
         subtitle="Schedule your free consultation and discover how permanent exterior lighting can transform your property."
         variant="gold"
