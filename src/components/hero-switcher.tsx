@@ -91,35 +91,33 @@ export function HeroSwitcher() {
           />
 
           {/* Theme Switcher */}
-          <div className="mt-10 w-full max-w-4xl mx-auto">
-            {/* Theme Buttons - Full width grid */}
-            <div className="grid grid-cols-4 gap-0">
+          <div className="mt-12 w-full max-w-5xl mx-auto px-4">
+            {/* Theme Buttons - Full width grid with gaps */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {heroThemes.map((theme, index) => (
                 <button
                   key={theme.id}
                   onClick={() => setActiveTheme(theme.id)}
                   className={`
-                    relative py-4 px-3 text-lg
+                    relative py-6 px-4 rounded-xl
                     transition-all duration-300
-                    border border-white/20
-                    ${index === 0 ? "rounded-l-lg" : ""}
-                    ${index === heroThemes.length - 1 ? "rounded-r-lg" : ""}
+                    border-2
                     ${
                       activeTheme === theme.id
-                        ? "bg-gold-500 text-white border-gold-500 z-10"
-                        : "bg-white/10 text-white/90 hover:bg-white/20 backdrop-blur-sm"
+                        ? "bg-gold-500 text-white border-gold-400 shadow-lg shadow-gold-500/30 scale-105"
+                        : "bg-white/10 text-white/90 hover:bg-white/20 backdrop-blur-sm border-white/30 hover:border-white/50"
                     }
                   `}
                 >
                   {/* Try Me label on first box */}
                   {index === 0 && (
                     <span
-                      className="absolute -top-6 left-2 text-gold-400 text-xl flex items-center gap-1"
+                      className="absolute -top-7 left-3 text-gold-400 text-2xl flex items-center gap-1"
                       style={{ fontFamily: 'var(--font-caveat), Caveat, cursive' }}
                     >
                       Try me!
                       <svg
-                        className="w-4 h-4 animate-bounce rotate-45"
+                        className="w-5 h-5 animate-bounce rotate-45"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -135,7 +133,7 @@ export function HeroSwitcher() {
                   )}
                   <span
                     style={{ fontFamily: 'var(--font-caveat), Caveat, cursive' }}
-                    className="text-xl"
+                    className="text-2xl"
                   >
                     {theme.label}
                   </span>
