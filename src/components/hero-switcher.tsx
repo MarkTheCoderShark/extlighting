@@ -91,9 +91,9 @@ export function HeroSwitcher() {
           />
 
           {/* Theme Switcher */}
-          <div className="mt-12 w-full max-w-5xl mx-auto px-4">
+          <div className="mt-12 w-full px-4">
             {/* Theme Buttons - Full width grid with gaps */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {heroThemes.map((theme, index) => (
                 <button
                   key={theme.id}
