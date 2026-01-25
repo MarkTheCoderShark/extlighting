@@ -69,13 +69,13 @@ export function ThemeShowcase({ className }: ThemeShowcaseProps) {
                   />
                 </svg>
               </span>
-              <div className="flex flex-row lg:flex-col gap-4">
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 lg:gap-4">
                 {themes.map((theme) => (
                   <button
                     key={theme.id}
                     onClick={() => setActiveTheme(theme.id)}
                     className={`
-                      flex-1 lg:flex-none py-4 px-4 rounded-xl
+                      py-3 px-3 lg:py-4 lg:px-4 rounded-xl
                       transition-all duration-300
                       border-2 text-center
                       ${
@@ -87,7 +87,7 @@ export function ThemeShowcase({ className }: ThemeShowcaseProps) {
                   >
                     <span
                       style={{ fontFamily: 'var(--font-caveat), Caveat, cursive' }}
-                      className="text-2xl"
+                      className="text-xl lg:text-2xl"
                     >
                       {theme.label}
                     </span>
