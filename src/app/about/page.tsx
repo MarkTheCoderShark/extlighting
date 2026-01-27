@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Shield, Users, Award, Heart, CheckCircle, Lightbulb, MapPin } from "lucide-react";
+import { Shield, Users, Award, Heart, CheckCircle } from "lucide-react";
+import Image from "next/image";
 import { CTAButton } from "@/components/cta-button";
 import { SectionHeading, HighlightedText } from "@/components/section-heading";
 import { TrustBadges } from "@/components/trust-badge";
 import { StatsSection } from "@/components/stats-section";
 import { TeamSection } from "@/components/team-section";
 import { CTASection } from "@/components/cta-section";
+import { ServiceAreaMap } from "@/components/service-area-map";
 import { business } from "@/lib/data/business";
 
 export const metadata: Metadata = {
@@ -86,7 +88,7 @@ export default function AboutPage() {
             title={<>Our <HighlightedText>Story</HighlightedText></>}
             subtitle="From frustrated homeowners to Sacramento's leading permanent lighting experts."
           />
-          
+
           <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div>
               <h3 className="text-2xl font-bold text-charcoal-900 mb-4">
@@ -99,20 +101,19 @@ export default function AboutPage() {
                 When permanent exterior lighting technology emerged, we saw an opportunity to change the game for our community. Not just to eliminate the hassle, but to help homeowners experience their properties in an entirely new way.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-charcoal-800 to-charcoal-900 flex items-center justify-center">
-              <div className="text-center p-8">
-                <Lightbulb className="h-16 w-16 text-gold-400 mx-auto mb-4" />
-                <p className="text-charcoal-400 text-sm">The spark of an idea</p>
-              </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/gallery/hero christmas.png"
+                alt="Beautiful holiday lighting on a Sacramento home"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
           <div className="mt-20 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-gold-600 to-gold-800 flex items-center justify-center lg:order-1">
-              <div className="text-center p-8">
-                <MapPin className="h-16 w-16 text-white mx-auto mb-4" />
-                <p className="text-gold-100 text-sm">Serving Sacramento region</p>
-              </div>
+            <div className="lg:order-1">
+              <ServiceAreaMap />
             </div>
             <div className="lg:order-2">
               <h3 className="text-2xl font-bold text-charcoal-900 mb-4">
@@ -194,7 +195,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <TeamSection 
+      <TeamSection
         title="Meet the Team"
         subtitle="The local experts behind every beautiful installation."
       />
@@ -236,7 +237,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTASection 
+      <CTASection
         title="Ready to Work with Us?"
         subtitle="Experience the EXT Lighting difference. Schedule your free consultation and discover how we can transform your property."
         variant="gold"

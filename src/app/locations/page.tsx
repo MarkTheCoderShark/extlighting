@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MapPin, Users, Shield, Clock } from "lucide-react";
 import { CTAButton } from "@/components/cta-button";
 import { SectionHeading } from "@/components/section-heading";
 import { LocationGrid } from "@/components/location-card";
+import { ServiceAreaMap } from "@/components/service-area-map";
+import { CTASection } from "@/components/cta-section";
 import { locations } from "@/lib/data/locations";
 import { business } from "@/lib/data/business";
 
@@ -15,8 +18,18 @@ export const metadata: Metadata = {
 export default function LocationsPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-charcoal-900 to-charcoal-800 section pt-28 md:pt-36">
-        <div className="container">
+      <section className="relative section pt-28 md:pt-36 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/residential-6.png"
+            alt="Beautifully lit Sacramento home"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/95 via-charcoal-900/80 to-charcoal-900/60" />
+        </div>
+        <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-white mb-6">Our Service Areas</h1>
             <p className="text-lg text-charcoal-300 md:text-xl">
@@ -46,7 +59,7 @@ export default function LocationsPage() {
             title="Sacramento Region's Premier Lighting Service"
             subtitle="From Midtown's historic homes to El Dorado Hills' modern estates, we bring expert permanent lighting to every community."
           />
-          
+
           <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div>
               <h3 className="text-2xl font-bold text-charcoal-900 mb-4">
@@ -65,27 +78,26 @@ export default function LocationsPage() {
                 and the aesthetic preferences that make each neighborhood special.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-gold-600 to-gold-800 flex items-center justify-center">
-              <div className="text-center p-8">
-                <MapPin className="h-16 w-16 text-white mx-auto mb-4" />
-                <p className="text-gold-100 text-sm">Serving the greater Sacramento area</p>
-              </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/gallery/residential-8.png"
+                alt="Beautiful home lighting installation in Sacramento"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
           <div className="mt-20 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-charcoal-800 to-charcoal-900 flex items-center justify-center lg:order-1">
-              <div className="text-center p-8">
-                <Users className="h-16 w-16 text-gold-400 mx-auto mb-4" />
-                <p className="text-charcoal-400 text-sm">Your local lighting experts</p>
-              </div>
+            <div className="lg:order-1">
+              <ServiceAreaMap />
             </div>
             <div className="lg:order-2">
               <h3 className="text-2xl font-bold text-charcoal-900 mb-4">
                 Counties We Serve
               </h3>
               <p className="text-charcoal-600 leading-relaxed mb-6">
-                This local knowledge helps us create lighting designs that truly 
+                This local knowledge helps us create lighting designs that truly
                 fit each property and community. We proudly serve:
               </p>
               <div className="grid grid-cols-2 gap-3 mb-6">
@@ -110,8 +122,8 @@ export default function LocationsPage() {
                   Not Sure If We Serve Your Area?
                 </h3>
                 <p className="text-charcoal-300 leading-relaxed mb-4">
-                  If you&apos;re within 50 miles of Sacramento, we can likely help. 
-                  Contact us to discuss your project—we love bringing permanent 
+                  If you&apos;re within 50 miles of Sacramento, we can likely help.
+                  Contact us to discuss your project—we love bringing permanent
                   lighting to new communities.
                 </p>
                 <CTAButton href="/quote" className="mt-4">
@@ -141,18 +153,10 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      <section className="bg-gold-700 section">
-        <div className="container text-center">
-          <h2 className="text-white mb-4">Ready to Transform Your Property?</h2>
-          <p className="mx-auto max-w-2xl text-lg text-gold-100 mb-8">
-            No matter where you are in the Sacramento region, we&apos;re ready to
-            bring permanent lighting excellence to your property.
-          </p>
-          <CTAButton href="/quote" variant="secondary" size="lg">
-            Get Your Free Quote
-          </CTAButton>
-        </div>
-      </section>
+      <CTASection
+        title="Ready to Transform Your Property?"
+        subtitle="No matter where you are in the Sacramento region, we're ready to bring permanent lighting excellence to your property."
+      />
     </>
   );
 }
