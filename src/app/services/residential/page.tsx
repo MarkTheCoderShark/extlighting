@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle, Home, Smartphone, Shield, Palette, Sun, ArrowRight } from "lucide-react";
 import { CTAButton } from "@/components/cta-button";
@@ -79,7 +80,7 @@ const idealFor = [
 export default function ResidentialPage() {
   const service = getServiceBySlug("residential");
   const testimonials = getTestimonials("residential").slice(0, 2);
-  const faqs = getFAQItems().filter(f => 
+  const faqs = getFAQItems().filter(f =>
     ["pricing", "installation", "product"].includes(f.category)
   ).slice(0, 6);
 
@@ -87,8 +88,18 @@ export default function ResidentialPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-charcoal-900 to-charcoal-800 section pt-28 md:pt-36">
-        <div className="container">
+      <section className="relative section pt-28 md:pt-36 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/residential-11.png"
+            alt="Beautiful home with permanent LED lighting"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/95 via-charcoal-900/80 to-charcoal-900/60" />
+        </div>
+        <div className="container relative z-10">
           <BreadcrumbNav
             items={[
               { label: "Services", href: "/services" },
@@ -249,7 +260,7 @@ export default function ResidentialPage() {
         </div>
       </section>
 
-      <TeamSection 
+      <TeamSection
         title="Your Local Installation Experts"
         subtitle="Our factory-trained team brings years of experience to every residential project."
       />
@@ -270,7 +281,7 @@ export default function ResidentialPage() {
         </section>
       )}
 
-      <FAQSection 
+      <FAQSection
         faqs={faqs}
         title="Residential Lighting FAQs"
         subtitle="Common questions from homeowners considering permanent lighting."
@@ -278,14 +289,14 @@ export default function ResidentialPage() {
         columns={2}
       />
 
-      <ServiceAreasSection 
+      <ServiceAreasSection
         title="Residential Lighting in Your Area"
         subtitle="We serve homeowners throughout the greater Sacramento region."
         serviceType="residential"
         maxLocations={8}
       />
 
-      <CTASection 
+      <CTASection
         title="Ready to Transform Your Home?"
         subtitle="Join hundreds of Sacramento homeowners who've made the switch to permanent lighting. Get your free, no-obligation quote today."
         variant="gold"

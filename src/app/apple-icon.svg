@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="#1a1a1a"/>
+  <!-- Lightbulb glow effect -->
+  <circle cx="90" cy="75" r="45" fill="#b8860b" opacity="0.25"/>
+  <!-- Lightbulb body -->
+  <path d="M90 25c-24.8 0-45 20.2-45 45 0 15.8 8.4 29.9 21.4 37.8 1.7 1.1 2.8 2.8 3.4 5.1l3.4 19.1h33.6l3.4-19.1c.6-2.3 1.7-4 3.4-5.1C126.6 99.9 135 85.8 135 70c0-24.8-20.2-45-45-45z" fill="#b8860b"/>
+  <!-- Lightbulb base -->
+  <rect x="68" y="138" width="44" height="12" rx="4" fill="#d4a84b"/>
+  <rect x="68" y="154" width="44" height="12" rx="4" fill="#d4a84b"/>
+  <!-- Lightbulb shine -->
+  <path d="M73 60c0-9.4 7.6-17 17-17" stroke="white" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.5"/>
+</svg>

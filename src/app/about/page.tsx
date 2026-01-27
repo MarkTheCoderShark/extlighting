@@ -65,8 +65,18 @@ const credentials = [
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-charcoal-900 to-charcoal-800 section pt-28 md:pt-36">
-        <div className="container">
+      <section className="relative section pt-28 md:pt-36 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/residential-7.png"
+            alt="Beautiful home with permanent LED lighting"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/95 via-charcoal-900/85 to-charcoal-900/70" />
+        </div>
+        <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-white mb-6">About EXT Lighting</h1>
             <p className="text-lg text-charcoal-300 md:text-xl">
