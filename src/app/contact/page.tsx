@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, ArrowRight, ClipboardList, Home, FileText, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowRight, ClipboardList, FileText, CheckCircle } from "lucide-react";
 import { CTAButton } from "@/components/cta-button";
 import { SectionHeading } from "@/components/section-heading";
+import { ContactForm } from "@/components/contact-form";
 import { business } from "@/lib/data/business";
 import { locations } from "@/lib/data/locations";
 
@@ -108,20 +109,13 @@ export default function ContactPage() {
             </div>
 
             <div className="rounded-xl bg-white p-8 shadow-lg border border-charcoal-100">
-              <h3 className="text-2xl font-bold text-charcoal-900 mb-4">
+              <h3 className="text-2xl font-bold text-charcoal-900 mb-2">
                 Request a Free Quote
               </h3>
-              <p className="text-charcoal-600 mb-6">
-                The fastest way to get started is through our online quote form.
-                Tell us about your project and we&apos;ll get back to you within 24
-                hours.
+              <p className="text-charcoal-600 mb-6 text-sm">
+                Tell us about your project and we&apos;ll get back to you within 24 hours.
               </p>
-              <CTAButton href="/quote" className="w-full" size="lg">
-                Get Your Free Quote
-              </CTAButton>
-              <p className="text-center text-sm text-charcoal-500 mt-4">
-                No obligation • Response within 24 hours
-              </p>
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -160,7 +154,7 @@ export default function ContactPage() {
             title="Our Consultation Process"
             subtitle="From first contact to final proposal, here's what to expect when you reach out."
           />
-          
+
           <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div>
               <h3 className="text-2xl font-bold text-charcoal-900 mb-6">

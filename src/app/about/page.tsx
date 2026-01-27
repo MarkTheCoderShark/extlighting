@@ -68,7 +68,7 @@ export default function AboutPage() {
       <section className="relative section pt-28 md:pt-36 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/gallery/residential-7.png"
+            src="/images/gallery/residential-10.png"
             alt="Beautiful home with permanent LED lighting"
             fill
             className="object-cover"
