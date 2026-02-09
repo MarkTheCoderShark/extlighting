@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locations } from "@/lib/data/locations";
 import { services } from "@/lib/data/services";
+import { getBlogPosts } from "@/lib/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://extlighting.com";
@@ -66,6 +67,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
   ];
 
   const cityPages: MetadataRoute.Sitemap = locations.map((location) => ({
@@ -84,5 +91,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticPages, ...cityPages, ...cityServicePages];
+  const blogPages: MetadataRoute.Sitemap = getBlogPosts().map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...cityPages, ...cityServicePages, ...blogPages];
 }

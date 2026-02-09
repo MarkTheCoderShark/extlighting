@@ -137,13 +137,13 @@ export default function CommercialPage() {
               <h2 className="mb-6">Elevate Your Business Presence</h2>
               <div className="prose prose-lg text-charcoal-700">
                 <p>
-                  In the competitive Sacramento business landscape, first impressions matter. Your building's exterior is often the first thing customers, clients, and partners see—and what they see after dark can make or break their perception of your business.
+                  In the competitive Sacramento business landscape, first impressions matter. Your building&apos;s exterior is often the first thing customers, clients, and partners see—and what they see after dark can make or break their perception of your business.
                 </p>
                 <p>
                   Commercial permanent lighting transforms how your property presents itself. Gone are the days of dark, uninviting storefronts or the hassle of coordinating annual holiday lighting installations. With our commercial-grade LED systems, your building becomes a beacon of professionalism every evening.
                 </p>
                 <p>
-                  But it's not just about aesthetics. Permanent lighting delivers tangible business benefits: reduced maintenance costs, enhanced security, improved employee safety, and a visual presence that reinforces your brand around the clock.
+                  But it&apos;s not just about aesthetics. Permanent lighting delivers tangible business benefits: reduced maintenance costs, enhanced security, improved employee safety, and a visual presence that reinforces your brand around the clock.
                 </p>
               </div>
               <div className="mt-8 p-6 rounded-xl bg-charcoal-900 text-white">
@@ -263,7 +263,7 @@ export default function CommercialPage() {
                   <CheckCircle className="h-6 w-6 flex-shrink-0 text-gold-700" />
                   <div>
                     <h4 className="font-bold text-charcoal-900">Local Commercial Expertise</h4>
-                    <p className="text-charcoal-600 text-sm">We understand Sacramento's commercial landscape, zoning requirements, and business district aesthetics.</p>
+                    <p className="text-charcoal-600 text-sm">We understand Sacramento&apos;s commercial landscape, zoning requirements, and business district aesthetics.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
