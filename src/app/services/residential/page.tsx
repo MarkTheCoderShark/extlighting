@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 const applications = [
   {
     title: "Roofline Lighting",
-    description: "Elegant lighting along your roof's edge that defines your home's silhouette and creates stunning curb appeal day and night.",
+    description: "Elegant lighting along your roof&apos;s edge that defines your home&apos;s silhouette and creates stunning curb appeal day and night.",
   },
   {
     title: "Soffit & Trim",
-    description: "Subtle accent lighting that highlights architectural details and adds depth to your home's facade.",
+    description: "Subtle accent lighting that highlights architectural details and adds depth to your home&apos;s facade.",
   },
   {
     title: "Accent Lighting",
@@ -54,7 +54,7 @@ const benefits = [
   },
   {
     title: "Curb Appeal",
-    description: "Your home will stand out in the neighborhood. Permanent lighting adds elegance that temporary lights simply can't match.",
+    description: "Your home will stand out in the neighborhood. Permanent lighting adds elegance that temporary lights simply can&apos;t match.",
     icon: Home,
   },
   {
@@ -135,17 +135,17 @@ export default function ResidentialPage() {
               <h2 className="mb-6">Transform Your Home with Permanent Lighting</h2>
               <div className="prose prose-lg text-charcoal-700">
                 <p>
-                  Every homeowner knows the routine: November arrives, and it's time to drag out the tangled lights from the garage, climb ladders in the cold, and spend hours making your home look festive. Then January comes, and it all comes down again—only to repeat the cycle next year.
+                  Every homeowner knows the routine: November arrives, and it&apos;s time to drag out the tangled lights from the garage, climb ladders in the cold, and spend hours making your home look festive. Then January comes, and it all comes down again—only to repeat the cycle next year.
                 </p>
                 <p>
-                  Permanent exterior lighting changes everything. Our professionally installed LED systems stay up year-round, becoming a seamless part of your home's architecture. When you want to light up for the holidays, you simply open an app on your phone and choose your colors.
+                  Permanent exterior lighting changes everything. Our professionally installed LED systems stay up year-round, becoming a seamless part of your home&apos;s architecture. When you want to light up for the holidays, you simply open an app on your phone and choose your colors.
                 </p>
               </div>
             </div>
             <div className="space-y-4">
               <div className="rounded-xl bg-gold-50 border border-gold-200 p-6">
                 <h3 className="font-bold text-charcoal-900 mb-2">Holiday Ready, Anytime</h3>
-                <p className="text-charcoal-600 text-sm">Switch to festive colors with a tap. Christmas red and green, Halloween orange, Valentine's pink—or your team's colors for game day.</p>
+                <p className="text-charcoal-600 text-sm">Switch to festive colors with a tap. Christmas red and green, Halloween orange, Valentine&apos;s pink—or your team&apos;s colors for game day.</p>
               </div>
               <div className="rounded-xl bg-gold-50 border border-gold-200 p-6">
                 <h3 className="font-bold text-charcoal-900 mb-2">Security & Ambiance</h3>
@@ -153,7 +153,7 @@ export default function ResidentialPage() {
               </div>
               <div className="rounded-xl bg-gold-50 border border-gold-200 p-6">
                 <h3 className="font-bold text-charcoal-900 mb-2">Property Value Boost</h3>
-                <p className="text-charcoal-600 text-sm">Permanent lighting is a sought-after feature that enhances curb appeal and adds value when it's time to sell.</p>
+                <p className="text-charcoal-600 text-sm">Permanent lighting is a sought-after feature that enhances curb appeal and adds value when it&apos;s time to sell.</p>
               </div>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function ResidentialPage() {
         <div className="container">
           <SectionHeading
             title="Lighting Applications"
-            subtitle="We customize every installation to enhance your home's unique architecture."
+            subtitle="We customize every installation to enhance your home&apos;s unique architecture."
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {applications.map((app, i) => (
@@ -242,7 +242,7 @@ export default function ResidentialPage() {
                 {service.priceRange.typical}
               </p>
               <p className="text-charcoal-600 mb-6">
-                Most residential installations fall within this range. Final pricing depends on your home's size, roofline complexity, and desired features.
+                Most residential installations fall within this range. Final pricing depends on your home&apos;s size, roofline complexity, and desired features.
               </p>
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature) => (
@@ -298,7 +298,7 @@ export default function ResidentialPage() {
 
       <CTASection
         title="Ready to Transform Your Home?"
-        subtitle="Join hundreds of Sacramento homeowners who've made the switch to permanent lighting. Get your free, no-obligation quote today."
+        subtitle="Join hundreds of Sacramento homeowners who&apos;ve made the switch to permanent lighting. Get your free, no-obligation quote today."
         variant="gold"
       />
     </>
