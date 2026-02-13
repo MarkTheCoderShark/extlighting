@@ -241,6 +241,90 @@ a {
   outline-offset: 2px;
 }
 
+/* Blog content */
+.blog-content {
+  color: var(--charcoal-700);
+}
+
+.blog-content p {
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+.blog-content h2 {
+  margin-top: 2.5rem;
+  color: var(--charcoal-900);
+}
+
+.blog-content h3 {
+  margin-top: 1.5rem;
+  color: var(--charcoal-900);
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.blog-content ul {
+  list-style: disc;
+}
+
+.blog-content ol {
+  list-style: decimal;
+}
+
+.blog-content table {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.blog-content th,
+.blog-content td {
+  border: 1px solid var(--charcoal-200);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.blog-content th {
+  background: var(--charcoal-50);
+  color: var(--charcoal-800);
+}
+
+.blog-content a {
+  color: var(--gold-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-content .blog-cta {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--gold-200);
+  border-radius: 1rem;
+  background: var(--gold-50);
+}
+
+.blog-content .blog-cta h3 {
+  margin-top: 0;
+}
+
+.blog-content .blog-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--gold-700);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 /* Gallery dark section */
 .gallery-dark {
   background-color: var(--gallery-bg);
