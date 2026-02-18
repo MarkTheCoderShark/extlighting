@@ -1835,6 +1835,657 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "permanent-outdoor-lighting-colors-design-guide",
+    title: "Permanent Outdoor Lighting Colors & Design Guide for Sacramento Homes",
+    description:
+      "How to choose permanent outdoor lighting colors, zones, and layout for maximum curb appeal in Sacramento — a practical design guide for homeowners.",
+    date: "2026-02-17",
+    author: "EXT Lighting",
+    category: "Homeowner Guide",
+    tags: [
+      "design",
+      "color selection",
+      "curb appeal",
+      "permanent lighting",
+      "Sacramento",
+      "residential",
+    ],
+    readTime: "22 min read",
+    summary:
+      "Choosing colors and layout for permanent outdoor lighting is one of the most personal decisions a Sacramento homeowner makes — and one of the most consequential for curb appeal year‑round. This guide walks through color science, zone planning, HOA considerations, and the design principles that separate a striking installation from a forgettable one.",
+    seo: {
+      title: "Permanent Outdoor Lighting Colors & Design Guide (Sacramento)",
+      description:
+        "Learn how to choose permanent outdoor lighting colors, zones, and layout for Sacramento homes. Practical design tips for maximum curb appeal year-round.",
+      keywords: [
+        "permanent outdoor lighting colors Sacramento",
+        "permanent house lighting design",
+        "outdoor lighting color selection",
+        "curb appeal lighting Sacramento",
+        "permanent LED lighting design guide",
+        "roofline lighting colors",
+      ],
+    },
+    toc: [
+      { id: "why-design-matters", label: "Why design decisions matter more than fixtures" },
+      { id: "color-science", label: "How color science applies to outdoor lighting" },
+      { id: "white-spectrum", label: "Warm white vs. cool white vs. daylight" },
+      { id: "color-modes", label: "Full‑color and multicolor modes" },
+      { id: "home-style", label: "Matching colors to your home style" },
+      { id: "zone-planning", label: "Zone planning: front, sides, back, and landscape" },
+      { id: "seasonal-programming", label: "Seasonal and holiday programming" },
+      { id: "hoa-guidelines", label: "HOA guidelines in Sacramento communities" },
+      { id: "neighbor-etiquette", label: "Neighbor etiquette and light pollution" },
+      { id: "common-mistakes", label: "Common design mistakes to avoid" },
+      { id: "design-process", label: "The design process with a professional installer" },
+      { id: "inspiration", label: "Design inspiration by neighborhood type" },
+      { id: "faq", label: "FAQ" },
+      { id: "next-steps", label: "Next steps" },
+    ],
+    content: `
+      <p>
+        Permanent outdoor lighting colors are one of the first things neighbors and
+        visitors notice — and one of the last things many homeowners think through
+        carefully before installation. A roofline that glows warm white every
+        evening creates a completely different impression than one cycling through
+        color every weekend. Both are valid choices, but they serve different homes,
+        different neighborhoods, and different homeowners.
+      </p>
+      <p>
+        This guide is for Sacramento homeowners who want to move past guessing and
+        make intentional design decisions before installation day. It covers color
+        science, zone planning, HOA realities across Sacramento's communities, and
+        the common mistakes that are easy to avoid when you know what to look for.
+        If you're still in the early research stage, our
+        <a href="/services/residential">residential lighting services</a> page gives
+        a broader overview of what a full installation includes. When you're ready
+        to discuss your specific home, a
+        <a href="/quote">free consultation</a> is the fastest way to translate ideas
+        into a concrete plan.
+      </p>
+
+      <div class="blog-cta">
+        <h3>Want to see colors in person before you decide?</h3>
+        <p>
+          An on‑site consultation lets you see color samples against your actual
+          roofline and trim — no guessing required.
+        </p>
+        <a href="/quote">Schedule your free design consultation</a>
+      </div>
+
+      <h2 id="why-design-matters">Why design decisions matter more than fixtures</h2>
+      <p>
+        The quality of permanent outdoor lighting hardware has converged significantly
+        over the last several years. Most professional‑grade systems use similar
+        LED chip technology, similar IP ratings, and similar control protocols. What
+        separates installations that look intentional from those that look like an
+        afterthought is almost always the design layer — color selection, zone
+        planning, and the decisions made before a single fixture goes up.
+      </p>
+      <p>
+        Hardware matters, but it's roughly 30% of the visual outcome. The remaining
+        70% comes from where the lights are placed, what color they run at, how many
+        zones are used, and how well the installation respects the architecture of
+        the home. Getting those decisions right is why working with an experienced
+        local installer in Sacramento is worth the time investment. See our
+        <a href="/gallery">project gallery</a> for examples of how design choices
+        play out across different home styles and neighborhoods.
+      </p>
+      <p>
+        The good news: most design decisions are programmable. If you choose a warm
+        white and later want to try a slightly cooler tone for summer evenings, you
+        update the controller. Committing to hardware doesn't mean locking in a
+        single look forever. What it does mean is thinking through your baseline —
+        the color and layout you'll run 300 nights a year — before the scaffolding
+        goes up.
+      </p>
+
+      <h2 id="color-science">How color science applies to outdoor lighting</h2>
+      <p>
+        LED lighting is measured in color temperature, expressed in Kelvin (K). This
+        number describes the hue of white light on a scale from warm amber to cool
+        blue‑white. For outdoor architectural lighting, the practical range is
+        roughly 2,700K to 6,500K, though the most commonly used range for permanent
+        residential lighting is much narrower — typically 2,700K to 4,000K for
+        everyday use.
+      </p>
+      <p>
+        Here's how to think about the Kelvin scale in practical terms:
+      </p>
+      <ul>
+        <li><strong>2,700K – 3,000K (warm white):</strong> The color of incandescent
+          bulbs. Flattering, inviting, and the most popular choice for roofline
+          lighting on traditional and craftsman‑style homes. Creates a cozy glow
+          that reads as "home" rather than "facility."</li>
+        <li><strong>3,500K – 4,000K (neutral white):</strong> Brighter and crisper than
+          warm white. Works well on contemporary and modern homes where a cleaner
+          look is the goal. Less flattering on natural wood tones and warm paint
+          colors.</li>
+        <li><strong>5,000K – 6,500K (cool white / daylight):</strong> High‑contrast and
+          clinical. Rarely used for everyday residential roofline lighting but
+          sometimes chosen for commercial façade applications where visibility takes
+          priority over ambiance.</li>
+      </ul>
+      <p>
+        Color Rendering Index (CRI) is a separate but related concept. CRI measures
+        how accurately a light source renders colors compared to natural daylight,
+        on a scale of 0 to 100. For outdoor lighting that will illuminate landscaping,
+        stonework, or painted surfaces, a CRI of 90 or above is worth prioritizing.
+        Lower CRI sources can make foliage look flat and paint colors appear muddy.
+      </p>
+      <p>
+        Most professional‑grade permanent lighting systems also offer full RGB or
+        RGBW capability, which means they can produce virtually any color on demand.
+        Understanding how to use those modes purposefully — rather than defaulting
+        to "run all colors" — is one of the most underrated design skills in
+        permanent lighting.
+      </p>
+
+      <h2 id="white-spectrum">Warm white vs. cool white vs. daylight</h2>
+      <p>
+        For the majority of Sacramento homeowners, the core design question is
+        which white to use as their everyday baseline. Full‑color modes are exciting,
+        but most nights of the year, a home runs its default color. Getting that
+        default right matters more than anything else.
+      </p>
+      <p>
+        <strong>Warm white (2,700K–3,000K)</strong> is the most universally flattering
+        choice for Sacramento's housing stock. The region has a high proportion of
+        homes with earth‑toned stucco, clay tile roofs, and warm trim colors —
+        all of which are complemented by warm light rather than flattened by it.
+        Neighborhoods like Fair Oaks, El Dorado Hills, and parts of Folsom skew
+        toward traditional architecture where warm white reads as refined and
+        intentional.
+      </p>
+      <p>
+        <strong>Neutral white (3,500K–4,000K)</strong> is the right choice for homes
+        with a more contemporary design language: flat or low‑pitch rooflines, gray
+        or white paint, metal accents, and minimal ornamentation. Many newer builds
+        in Rocklin and Roseville fall into this category. Neutral white gives those
+        homes a crisp, architectural quality that warm white can make look slightly
+        hazy by comparison.
+      </p>
+      <p>
+        <strong>Cool white (5,000K+)</strong> is rarely the right choice for everyday
+        residential use. It can look stark and industrial in most neighborhood
+        contexts and tends to create glare rather than ambiance. There are exceptions
+        — some ultramodern homes use it intentionally for a high‑contrast statement
+        — but it should be an informed choice, not a default.
+      </p>
+      <p>
+        A simple field test: look at the existing exterior lighting on your home —
+        porch lights, garage lights, path lights. If they're warm, your eye is
+        calibrated to that look and a warm roofline will feel cohesive. If they're
+        neutral or cool, you have more flexibility but should still confirm the
+        color temperature against your actual facade before committing.
+      </p>
+
+      <h2 id="color-modes">Full‑color and multicolor modes</h2>
+      <p>
+        Full‑color (RGB or RGBW) capability is now standard on most professional
+        permanent lighting systems. This means the same fixtures that run warm white
+        every night in October can shift to orange and purple for Halloween, red and
+        green for December, and team colors for game nights. The flexibility is
+        real and genuinely useful — but it's worth thinking through how you'll
+        actually use it.
+      </p>
+      <p>
+        A few principles that help homeowners get more from color modes:
+      </p>
+      <ul>
+        <li><strong>Use solid colors, not gradients, for most occasions.</strong> A
+          solid red‑and‑green display at Christmas looks intentional. A gradient
+          that fades through every color of the spectrum every five seconds reads
+          as "demo mode" rather than "design."</li>
+        <li><strong>Match colors to the occasion, not the calendar.</strong> Independence
+          Day red‑white‑blue is obvious. But consider also using your team's colors
+          on game days, or a soft blue for summer evenings when you want the house
+          to feel cool and calm. Color doesn't have to mean holiday.</li>
+        <li><strong>Respect the baseline.</strong> The color you run on a random Tuesday
+          in March is your actual design statement. Make sure your everyday white is
+          right before worrying about holiday presets.</li>
+        <li><strong>Create named scenes.</strong> Most controllers allow you to save
+          named scenes — "Summer Evening," "Game Night," "Christmas," "Off" — and
+          switch between them in one tap. Setting these up during installation (or
+          shortly after) saves a lot of fumbling later.</li>
+        <li><strong>Consider brightness levels separately from color.</strong> Dimming
+          to 40% at 10 PM for neighbor consideration is a separate setting from
+          color. Having both dialed in means your system is working for you rather
+          than requiring constant manual adjustment.</li>
+      </ul>
+      <p>
+        RGBW systems (which add a dedicated white LED to the RGB combination) produce
+        cleaner whites than pure RGB systems, which tend to render white as a slightly
+        color‑shifted hue. For homes where everyday white quality matters, RGBW is
+        the better choice. Ask your installer which chip configuration their system
+        uses.
+      </p>
+
+      <h2 id="home-style">Matching colors to your home style</h2>
+      <p>
+        Architectural style is the most reliable framework for color selection because
+        it gives you a vocabulary your neighbors and visitors already understand. A
+        Victorian in East Sacramento has different design cues than a ranch in
+        Orangevale or a contemporary in Granite Bay. Matching your lighting to your
+        architectural language makes the installation feel purposeful rather than
+        applied.
+      </p>
+      <p>
+        Here's a working framework by style category:
+      </p>
+      <ul>
+        <li><strong>Traditional / Craftsman (bungalows, colonial, cape cod):</strong>
+          Warm white (2,700K–3,000K) is the default choice. These homes have rich
+          wood tones, detailed trim, and organic material palettes that benefit from
+          warm light. Avoid cool white, which can make natural materials look gray
+          and lifeless.</li>
+        <li><strong>Mediterranean / Spanish Revival (stucco, clay tile):</strong>
+          Warm white pairs naturally with terracotta and earth tones. For a more
+          dramatic look, amber (2,200K–2,500K) can evoke lantern light in ways that
+          feel authentic to the style. This category is common across
+          <a href="/locations/sacramento">Sacramento</a>,
+          <a href="/locations/roseville">Roseville</a>, and
+          <a href="/locations/el-dorado-hills">El Dorado Hills</a>.</li>
+        <li><strong>Ranch / Mid‑century modern:</strong> Neutral white (3,500K) is
+          often the better fit for horizontal profiles and flat rooflines. Warm
+          white can work but tends to emphasize roof overhangs in ways that look
+          heavy on low‑pitch rooflines.</li>
+        <li><strong>Contemporary / Modern:</strong> Neutral to cool white (3,500K–4,500K)
+          works best with minimal ornamentation, gray and white paint, and geometric
+          forms. These homes benefit from crisper light that emphasizes clean lines
+          rather than softening them.</li>
+        <li><strong>Tudor / Victorian / Historic:</strong> Warm white or amber with
+          careful accent lighting on architectural features (dormers, gables, bay
+          windows). These homes reward complexity — multiple zones that highlight
+          different features are often more effective than a single long run.</li>
+      </ul>
+      <p>
+        Not sure which category your home falls into? Browse our
+        <a href="/gallery">project gallery</a> for before‑and‑after photos that
+        show how different Sacramento homes respond to different color and layout
+        choices.
+      </p>
+
+      <h2 id="zone-planning">Zone planning: front, sides, back, and landscape</h2>
+      <p>
+        Zone planning is the process of deciding which areas of your property get
+        lighting and how they're controlled. Most homeowners start with a front
+        roofline — it's visible from the street, it has the most impact on curb
+        appeal, and it's the easiest zone to justify as a starting point. But
+        thinking through the full property at design time, even if you don't
+        install everything immediately, saves significant cost later.
+      </p>
+      <p>
+        A typical residential property breaks into four natural zones:
+      </p>
+      <ul>
+        <li><strong>Front roofline:</strong> The primary curb appeal zone. Usually runs
+          along the front eaves, over the garage, and may wrap around a front porch
+          or column. This zone is almost always included in an initial installation.</li>
+        <li><strong>Side elevations:</strong> Visible from corner lots or homes on
+          streets with long sight lines. Adding side runs makes the installation
+          look intentional from multiple angles rather than a single‑face display.
+          Corner lots in neighborhoods like
+          <a href="/locations/citrus-heights">Citrus Heights</a> or
+          <a href="/locations/rancho-cordova">Rancho Cordova</a> often benefit
+          significantly from wrapping to the side elevations.</li>
+        <li><strong>Rear / backyard:</strong> Often the most‑used outdoor space during
+          spring and summer. A backyard zone allows you to host evening gatherings
+          with ambient lighting that doesn't require setting out temporary string
+          lights. Patio overhangs, fence lines, and pool areas are common backyard
+          lighting targets.</li>
+        <li><strong>Landscape and architectural accents:</strong> Trees, pathways,
+          garden beds, water features, and architectural elements (columns, archways,
+          retaining walls) can be incorporated as separate accent zones. These are
+          often added in a second phase once the roofline system is installed and
+          the homeowner has a feel for how the system works.</li>
+      </ul>
+      <p>
+        Even if you're only installing the front roofline now, your installer should
+        design the electrical infrastructure with expansion in mind. Pre‑running
+        conduit to zones you'll add later costs relatively little at installation
+        time and significantly reduces cost when you're ready to expand. Ask about
+        this specifically when you
+        <a href="/quote">request a quote</a>.
+      </p>
+      <p>
+        For homes with complex rooflines — multiple gables, dormers, or a covered
+        porch — zone planning also determines which sections are controlled
+        independently. A garage face and front porch might run on a separate zone
+        from the main roofline so you can dim the porch after 10 PM without
+        affecting the full display.
+      </p>
+
+      <h2 id="seasonal-programming">Seasonal and holiday programming</h2>
+      <p>
+        One of the most practical advantages of permanent lighting over traditional
+        holiday lights is the ability to schedule color and brightness changes
+        automatically. Most quality systems include an app that lets you create
+        schedules tied to dates or sunrise/sunset, so your lights automatically
+        shift from standard warm white to holiday colors without manual intervention.
+      </p>
+      <p>
+        A well‑programmed system for a Sacramento home might look like this across
+        the year:
+      </p>
+      <ul>
+        <li><strong>January–February:</strong> Warm white, standard brightness. Dusk to
+          11 PM weeknights, dusk to midnight weekends.</li>
+        <li><strong>March–April (spring):</strong> Pastel color rotation for Easter
+          weekend. Warm white otherwise.</li>
+        <li><strong>May–June (summer evenings):</strong> Warm white or a soft blue‑white
+          for outdoor entertaining. Slightly reduced brightness after 10 PM.</li>
+        <li><strong>July 4th weekend:</strong> Red, white, and blue preset.</li>
+        <li><strong>September–October:</strong> Orange and purple starting mid‑October.
+          Warm white through most of September.</li>
+        <li><strong>November (Thanksgiving):</strong> Amber and gold tones.</li>
+        <li><strong>December:</strong> Red and green, or warm white with a higher
+          brightness setting. Many homeowners run a specific Christmas preset from
+          Dec 1 through Jan 6.</li>
+      </ul>
+      <p>
+        The comparison to traditional holiday lights is stark: instead of spending
+        two weekends a year on a ladder, you spend 30 minutes in an app updating
+        schedules for the season ahead. Our post on
+        <a href="/blog/permanent-holiday-lighting-vs-traditional-string-lights">permanent holiday lighting vs. traditional string lights</a>
+        covers this comparison in detail, including safety and long‑term cost data.
+      </p>
+
+      <h2 id="hoa-guidelines">HOA guidelines in Sacramento communities</h2>
+      <p>
+        Many Sacramento‑area communities have HOA guidelines that govern exterior
+        modifications, including permanent lighting. The rules vary widely — some
+        HOAs have no restrictions on permanent lighting beyond general "no nuisance"
+        clauses, while others have specific requirements around color temperature,
+        brightness, or installation locations.
+      </p>
+      <p>
+        Common HOA requirements related to permanent lighting:
+      </p>
+      <ul>
+        <li><strong>Prior approval:</strong> Most HOAs require a written application
+          and approval before any exterior modification. Submit photos of comparable
+          installations and your proposed design.</li>
+        <li><strong>Color restrictions:</strong> Some HOAs limit lighting to warm white
+          only, or prohibit color‑changing displays except during designated holiday
+          windows (typically November through January).</li>
+        <li><strong>Brightness limits:</strong> Restrictions on brightness that creates
+          nuisance for neighbors, usually expressed as a maximum lumen output at the
+          property line.</li>
+        <li><strong>Hidden hardware:</strong> Requirements that mounting hardware be
+          concealed or match trim color. Low‑profile channel systems typically
+          satisfy these requirements more easily than exposed clip‑on fixtures.</li>
+        <li><strong>Removal requirements:</strong> Some HOAs require that lighting
+          systems be removable without damage to the structure. Permanent systems
+          that use channel tracks screwed into fascia typically meet this standard.</li>
+      </ul>
+      <p>
+        If your home is in a community managed by an HOA, gather the relevant
+        architectural guidelines before scheduling a consultation. An experienced
+        installer familiar with Sacramento communities — including those in
+        <a href="/locations/roseville">Roseville</a>,
+        <a href="/locations/rocklin">Rocklin</a>,
+        <a href="/locations/folsom">Folsom</a>, and
+        <a href="/locations/el-dorado-hills">El Dorado Hills</a> — will know the
+        common requirements and can design a system that's likely to pass review on
+        the first submission.
+      </p>
+      <p>
+        When in doubt, get HOA approval before installation rather than after. A
+        retrofitted or removed installation after the fact costs far more than
+        a few weeks of approval wait time.
+      </p>
+
+      <h2 id="neighbor-etiquette">Neighbor etiquette and light pollution</h2>
+      <p>
+        Even without HOA oversight, being a considerate neighbor is its own
+        argument for thoughtful permanent lighting design. Light that spills into
+        adjacent properties — particularly into bedroom windows — is the most
+        common source of neighbor complaints about permanent lighting, and it's
+        almost entirely avoidable with proper aiming and scheduling.
+      </p>
+      <p>
+        Practical steps to minimize light pollution:
+      </p>
+      <ul>
+        <li><strong>Aim fixtures downward or parallel to the roofline,</strong> not
+          outward toward the street or neighboring properties. Well‑aimed fixtures
+          illuminate the fascia and architecture rather than throwing light into
+          the surrounding area.</li>
+        <li><strong>Use auto‑dimming schedules.</strong> Running at 100% brightness
+          until midnight is rarely necessary or appreciated by neighbors. A schedule
+          that dims to 30–40% after 10 PM on weeknights is a simple courtesy that
+          most people never need to think about twice once it's set.</li>
+        <li><strong>Choose warm white for everyday use.</strong> Warm white is perceived
+          as less intrusive than cool white or bright multicolor displays by most
+          people. Reserve saturated full‑color modes for holidays and special
+          occasions rather than everyday operation.</li>
+        <li><strong>Avoid strobing or rapid color-change animations</strong> for
+          everyday use. Animated displays are visually striking from a distance
+          but can be fatiguing or distracting for neighbors with direct sight lines
+          to your roofline.</li>
+      </ul>
+      <p>
+        The best permanent lighting installations are ones that neighbors admire
+        rather than complain about. In Sacramento's denser neighborhoods — areas
+        like Midtown, Land Park, or older parts of Citrus Heights where lots are
+        narrower — these considerations are even more relevant. A warm, steady
+        roofline that dims at 10 PM is almost universally well‑received. A
+        color‑cycling display that runs full brightness until 1 AM is likely to
+        generate a knock on the door.
+      </p>
+
+      <h2 id="common-mistakes">Common design mistakes to avoid</h2>
+      <p>
+        After working on permanent lighting installations across the Sacramento
+        region, a handful of design mistakes come up repeatedly. Most are avoidable
+        with a bit of planning:
+      </p>
+      <ul>
+        <li><strong>Choosing color temperature without seeing it on the actual home.</strong>
+          Color temperature looks different against white stucco, gray siding, and
+          brown wood trim. Ask your installer to bring color samples or show you a
+          reference photo of a home with similar exterior finishes before you
+          commit.</li>
+        <li><strong>Installing front‑only when side visibility matters.</strong> Corner
+          lots and homes on curves look unfinished with front‑only lighting. The
+          side elevation is often what neighbors and passersby see first. A short
+          side run often costs less than expected and dramatically improves the
+          overall impression.</li>
+        <li><strong>Under‑planning for zones.</strong> A single‑zone system is simple
+          to operate but limiting in practice. At minimum, consider separate control
+          for the front roofline and any porch or patio area. Adding zones later
+          requires additional controllers and sometimes additional wiring runs.</li>
+        <li><strong>Ignoring the eave color.</strong> The track channel for permanent
+          lighting is visible during daylight hours. Matching the channel color to
+          your fascia or soffit color significantly reduces the visual impact of the
+          hardware during the day. Most installers offer multiple channel color
+          options — ask about them specifically.</li>
+        <li><strong>Not establishing a maintenance contact.</strong> LED systems are
+          reliable, but individual fixtures can fail over time. Before installation,
+          confirm what the warranty covers and who you call if a section stops
+          working. A local Sacramento installer is far easier to reach than an
+          out‑of‑area company for warranty service.</li>
+        <li><strong>Defaulting to "all the features" mode.</strong> Apps that come with
+          permanent lighting systems can include dozens of animations, color palettes,
+          and effects. Most homeowners who start with the full feature set settle into
+          three or four scenes they actually use. Start with simplicity — a solid
+          everyday color, a holiday preset, and an "off" schedule — and add
+          complexity as you learn the system.</li>
+      </ul>
+
+      <h2 id="design-process">The design process with a professional installer</h2>
+      <p>
+        A well‑structured installation consultation is a design conversation, not
+        a sales pitch. Here's what a productive process typically looks like when
+        working with a local Sacramento installer:
+      </p>
+      <ol>
+        <li><strong>Site walkthrough:</strong> The installer walks the property to
+          understand the roofline geometry, access points, electrical options,
+          and any obstacles (mature trees, HOA hardware requirements, unusual
+          eave configurations).</li>
+        <li><strong>Goal clarification:</strong> You discuss how you intend to use
+          the system — everyday ambiance, holiday displays, security, entertaining —
+          and which zones matter most to you.</li>
+        <li><strong>Color and layout proposal:</strong> The installer proposes a layout,
+          color temperature, and zone configuration based on the walkthrough and
+          your goals. This should include a visual reference (photo of a similar
+          installation or color sample) so you can confirm before installation.</li>
+        <li><strong>Quote:</strong> A written quote reflects the specific scope —
+          linear footage, number of zones, controller type, and any special
+          conditions. If you want to understand the pricing factors in more detail,
+          our
+          <a href="/blog/permanent-outdoor-lighting-cost-sacramento">Sacramento permanent lighting cost guide</a>
+          breaks down what drives the numbers.</li>
+        <li><strong>Installation:</strong> Most residential installations complete in
+          one day. The installer mounts the track, runs the fixtures, installs the
+          controller, connects to power, and programs the initial scenes before
+          leaving.</li>
+        <li><strong>Walkthrough and handoff:</strong> Before leaving, the installer
+          walks you through the app, confirms the initial programming, and explains
+          the warranty and service process.</li>
+      </ol>
+      <p>
+        The difference between a good installation experience and a frustrating one
+        usually comes down to steps 2 and 3 — whether the installer took time to
+        understand your goals and proposed something specific to your home rather
+        than a generic layout. That's the value of working with an installer who
+        has experience across Sacramento's diverse housing stock.
+      </p>
+
+      <h2 id="inspiration">Design inspiration by neighborhood type</h2>
+      <p>
+        Sacramento's neighborhoods have distinct architectural characters that
+        suggest different design approaches. Here's a quick guide to common
+        neighborhood types and what tends to work well in each:
+      </p>
+      <ul>
+        <li><strong>Midtown / East Sacramento (historic homes):</strong> Warm white
+          2,700K on Victorian or craftsman details. Emphasis on highlighting
+          architectural features — gables, front porches, bay windows — rather than
+          a single continuous run. Understated during the day, dramatic at night.</li>
+        <li><strong>Citrus Heights / Orangevale (ranch and mid‑century):</strong>
+          Warm white or neutral white on long horizontal rooflines. These homes often
+          benefit from full perimeter coverage because the roofline is simple enough
+          to wrap without complexity. Side runs are especially effective on flat
+          ranch profiles.</li>
+        <li><strong>Roseville / Rocklin (newer suburban):</strong> Mix of contemporary
+          and traditional architecture. Newer tract homes often use neutral white
+          3,500K to complement cool‑gray exteriors and black or bronze hardware.
+          HOA‑compliant profiles are common in these communities — see our
+          <a href="/locations/roseville">Roseville</a> and
+          <a href="/locations/rocklin">Rocklin</a> location pages for local
+          context.</li>
+        <li><strong>Folsom / El Dorado Hills (foothill communities):</strong> Stone and
+          stucco combinations, often with warm earth tones. Warm white at 2,700K
+          or amber‑shifted 3,000K reads as natural and high‑end against these
+          materials. Landscape integration — trees and retaining walls — is common
+          in foothill lots with more varied terrain.</li>
+        <li><strong>Granite Bay / Loomis (custom and estate homes):</strong> More
+          latitude for complex multi‑zone designs and higher fixture counts. These
+          homes often benefit from a full design consultation that includes landscape,
+          pool, driveway, and architectural accent zones as a coordinated system
+          rather than a single roofline run.</li>
+      </ul>
+      <p>
+        For a closer look at what's been installed in your specific area, visit
+        the relevant location page or browse our
+        <a href="/gallery">project gallery</a>. Seeing completed projects near your
+        neighborhood is often the fastest way to clarify what you want — and what
+        you don't.
+      </p>
+
+      <h2 id="next-steps">Next steps</h2>
+      <p>
+        Permanent outdoor lighting is one of the few home upgrades that you engage
+        with every single day — every time you pull into your driveway after dark,
+        every time a guest comments on your home, every holiday you skip the ladder
+        and just open an app. Getting the design right from the start makes those
+        daily interactions genuinely satisfying.
+      </p>
+      <p>
+        The fastest path to clarity is a conversation with someone who can walk your
+        property, understand your goals, and show you what's actually possible for
+        your home and neighborhood. Our team works across Sacramento and the
+        surrounding region — from
+        <a href="/locations/auburn">Auburn</a> and
+        <a href="/locations/grass-valley">Grass Valley</a> to
+        <a href="/locations/folsom">Folsom</a> and
+        <a href="/locations/el-dorado-hills">El Dorado Hills</a> — and brings
+        installation experience across the full range of home styles and HOA
+        environments you'll find in this area.
+      </p>
+      <p>
+        If you're comparing options or trying to understand what a project might
+        cost, our
+        <a href="/blog/permanent-outdoor-lighting-cost-sacramento">2026 pricing guide</a>
+        and our
+        <a href="/faq">FAQ page</a> are good starting points. When you're ready
+        to move from research to planning,
+        <a href="/quote">request a free consultation</a> and we'll take it from there.
+      </p>
+
+      <h3>Further reading</h3>
+      <ul>
+        <li>Illuminating Engineering Society — <a href="https://www.ies.org" rel="noopener noreferrer" target="_blank">ies.org</a>: Standards and guidelines for exterior lighting quality and light pollution</li>
+        <li>Source: ENERGY STAR program (energystar.gov) for LED efficiency standards</li>
+      </ul>
+    `,
+    faq: [
+      {
+        question: "What color temperature is best for most Sacramento homes?",
+        answer:
+          "Warm white (2,700K–3,000K) is the most universally flattering choice for Sacramento's housing stock, which skews toward stucco, earth tones, and traditional architecture. Contemporary homes with gray or white exteriors often benefit from neutral white (3,500K–4,000K).",
+      },
+      {
+        question: "Can I change the color after installation?",
+        answer:
+          "Yes. Full‑color (RGBW) systems allow you to change color, brightness, and animation from an app. Your everyday baseline color is a setting, not a hardware choice — you can update it whenever you want.",
+      },
+      {
+        question: "Will my HOA approve permanent outdoor lighting?",
+        answer:
+          "Many Sacramento HOAs approve permanent lighting systems, especially low‑profile designs that match fascia color. The key is to submit for approval before installation, include a design reference, and confirm you understand any color or brightness restrictions.",
+      },
+      {
+        question: "How many zones do I need?",
+        answer:
+          "Most residential installations use two to four zones: a primary roofline zone, a porch or entry zone, and optionally a backyard or landscape zone. More zones add control flexibility but also cost. Your installer can recommend a zone configuration based on your layout and how you plan to use the system.",
+      },
+      {
+        question: "Is the track hardware visible during the day?",
+        answer:
+          "Yes. The channel track is visible during daylight hours. Most installers offer channels in multiple colors (white, beige, brown, black) to match your fascia. Choosing the right channel color is one of the simplest ways to reduce the daytime visual impact of the system.",
+      },
+      {
+        question: "Do permanent lights work during Sacramento's summer heat?",
+        answer:
+          "Professional‑grade systems are rated for outdoor use across the full range of Sacramento temperatures. Heat can affect long‑term LED performance in lower‑quality systems, which is one reason why hardware quality and warranty terms matter.",
+      },
+      {
+        question: "Can I add landscape or backyard zones later?",
+        answer:
+          "Yes, most systems can be expanded. If you plan to add zones later, ask your installer to pre‑run conduit to those areas during the initial installation. Doing so costs relatively little upfront and significantly reduces cost when you expand.",
+      },
+      {
+        question: "How do I find out what looks good near my neighborhood?",
+        answer:
+          "Our project gallery shows completed installations across the Sacramento region. Your installer can also walk you through color samples against your actual exterior during the consultation.",
+      },
+      {
+        question: "What's the best way to avoid bothering my neighbors with the lights?",
+        answer:
+          "Set an auto‑dim schedule that reduces brightness after 10 PM on weeknights. Aim fixtures to illuminate your fascia rather than throwing light outward. Use steady solid colors for everyday operation rather than animated or flashing modes.",
+      },
+      {
+        question: "How do I get started?",
+        answer:
+          "The fastest way to move from research to a real plan is a free on‑site consultation. Visit our quote page to schedule one — we'll walk your property, discuss your goals, and provide a written proposal.",
+      },
+    ],
+  },
 ];
 
 export const getBlogPostBySlug = (slug: string) =>
