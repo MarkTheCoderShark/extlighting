@@ -26,8 +26,8 @@ export const blogPosts: BlogPost[] = [
       "Detailed pricing breakdown for permanent outdoor LED lighting installation in Sacramento. Compare costs by home size, learn what affects price, and see how permanent lights save money vs. temporary installations.",
     excerpt:
       "Sacramento homeowners typically invest between $3,000 and $8,000 for a permanent outdoor lighting system. Here's exactly what determines your price and how the numbers compare to hiring temporary light installers year after year.",
-    publishedAt: "2026-02-22",
-    updatedAt: "2026-02-22",
+    publishedAt: "2026-02-22T00:00:00Z",
+    updatedAt: "2026-02-22T00:00:00Z",
     category: "Pricing",
     readTime: "10 min read",
     keywords: [
@@ -50,8 +50,8 @@ export const blogPosts: BlogPost[] = [
       "An honest look at whether permanent outdoor lights are worth the investment for Sacramento homeowners. Real ROI data, home value impact, cost savings analysis, and HOA benefits.",
     excerpt:
       "Permanent outdoor lights cost several thousand dollars upfront. But when you factor in eliminated annual costs, increased home value, and year-round functionality, the numbers tell a compelling story for Sacramento homeowners.",
-    publishedAt: "2026-02-20",
-    updatedAt: "2026-02-20",
+    publishedAt: "2026-02-20T00:00:00Z",
+    updatedAt: "2026-02-20T00:00:00Z",
     category: "Buying Guide",
     readTime: "12 min read",
     keywords: [
@@ -74,8 +74,8 @@ export const blogPosts: BlogPost[] = [
       "Learn how Sacramento's heat, UV exposure, and weather affect permanent outdoor light lifespan. Covers LED ratings, IP protection, maintenance schedules, and what to look for in a durable system.",
     excerpt:
       "Professional-grade permanent LED lights are rated for 50,000+ hours. But Sacramento's extreme summer heat and UV exposure create unique challenges. Here's what actually determines how long your system will last.",
-    publishedAt: "2026-02-18",
-    updatedAt: "2026-02-18",
+    publishedAt: "2026-02-18T00:00:00Z",
+    updatedAt: "2026-02-18T00:00:00Z",
     category: "Maintenance",
     readTime: "11 min read",
     keywords: [
