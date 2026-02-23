@@ -121,7 +121,7 @@ export function Header() {
           mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <div className="border-t border-charcoal-200 bg-background px-4 pb-4 pt-2">
+        <div className="border-t border-charcoal-200 bg-background px-4 pb-4 pt-2 rounded-b-2xl">
           {navigation.map((item) => (
             <Link
               key={item.name}
