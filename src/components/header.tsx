@@ -118,7 +118,7 @@ export function Header() {
         id="mobile-menu"
         className={cn(
           "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
-          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         )}
       >
         <div className="border-t border-charcoal-200 bg-background px-4 pb-4 pt-2">
