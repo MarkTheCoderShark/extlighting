@@ -195,6 +195,17 @@ export function Footer() {
             <p className="text-sm text-charcoal-500">
               Serving {business.serviceArea.primary} and surrounding areas
             </p>
+            <p className="text-sm text-charcoal-500">
+              Designed by{" "}
+              <a
+                href="https://verlua.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold-700 transition-colors"
+              >
+                Verlua
+              </a>
+            </p>
           </div>
         </div>
       </div>
