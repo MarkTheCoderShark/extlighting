@@ -1,203 +1,219 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, Clock, Tag, CalendarDays } from "lucide-react";
 import { BreadcrumbNav } from "@/components/breadcrumb-nav";
 import { CTASection } from "@/components/cta-section";
-import { getBlogPostBySlug, getBlogPosts } from "@/lib/data/blog";
+import { blogPosts, getBlogPostBySlug } from "@/lib/data/blog";
 import { business } from "@/lib/data/business";
+import { CostGuideContent } from "@/components/blog/cost-guide";
+import { WorthItContent } from "@/components/blog/worth-it";
+import { HowLongLastContent } from "@/components/blog/how-long-last";
 
-interface BlogPageProps {
-  params: { slug: string };
+interface BlogPostPageProps {
+  params: Promise<{ slug: string }>;
 }
 
-export function generateStaticParams() {
-  return getBlogPosts().map((post) => ({ slug: post.slug }));
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
-export function generateMetadata({ params }: BlogPageProps): Metadata {
-  const post = getBlogPostBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
+
   if (!post) {
-    return { title: "Blog Post Not Found" };
+    return { title: "Post Not Found" };
   }
 
   return {
-    title: post.title,
+    title: post.ogTitle,
     description: post.description,
+    keywords: post.keywords,
     openGraph: {
-      title: post.title,
-      description: post.description,
+      title: post.ogTitle,
+      description: post.ogDescription,
       type: "article",
-      url: `https://extlighting.com/blog/${post.slug}`,
-      images: [{ url: `https://extlighting.com${post.heroImage}` }],
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
+      authors: [business.name],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.ogTitle,
+      description: post.ogDescription,
     },
   };
 }
 
-export default function BlogPostPage({ params }: BlogPageProps) {
-  const post = getBlogPostBySlug(params.slug);
+const contentComponents: Record<string, React.ComponentType> = {
+  "permanent-outdoor-lights-cost-sacramento": CostGuideContent,
+  "are-permanent-outdoor-lights-worth-it": WorthItContent,
+  "how-long-do-permanent-outdoor-lights-last": HowLongLastContent,
+};
+
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
 
-  const blogJsonLd = {
+  const ContentComponent = contentComponents[slug];
+
+  if (!ContentComponent) {
+    notFound();
+  }
+
+  const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt,
     author: {
       "@type": "Organization",
       name: business.name,
+      url: "https://extlighting.com",
     },
     publisher: {
       "@type": "Organization",
       name: business.name,
+      url: "https://extlighting.com",
     },
-    image: [`https://extlighting.com${post.heroImage}`],
-    mainEntityOfPage: `https://extlighting.com/blog/${post.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://extlighting.com/blog/${slug}`,
+    },
+    keywords: post.keywords.join(", "),
   };
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: post.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  // Get other blog posts for "Related Articles"
+  const relatedPosts = blogPosts.filter((p) => p.slug !== slug);
 
   return (
     <>
-      <section className="relative section pt-28 md:pt-36 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src={post.heroImage}
-            alt={post.heroAlt}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/95 via-charcoal-900/80 to-charcoal-900/60" />
-        </div>
-        <div className="container relative z-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <section className="section pt-28 md:pt-36 bg-background">
+        <div className="container">
           <BreadcrumbNav
             items={[
               { label: "Blog", href: "/blog" },
-              { label: post.title },
+              { label: post.category },
             ]}
-            className="text-white/80"
+            className="mb-8"
           />
-          <div className="mt-6 max-w-3xl">
-            <p className="text-gold-300 uppercase tracking-widest text-xs mb-3">
-              {post.category}
-            </p>
-            <h1 className="text-white mb-6">{post.title}</h1>
-            <p className="text-lg text-charcoal-200 md:text-xl">{post.description}</p>
-            <div className="mt-6 text-sm text-charcoal-300 flex flex-wrap gap-4">
-              <span>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
-              <span>{post.readTime}</span>
-              <span>Primary keyword: {post.primaryKeyword}</span>
+
+          <div className="max-w-3xl mx-auto">
+            {/* Post Header */}
+            <div className="mb-10">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-gold-100 px-3 py-1 text-xs font-medium text-gold-800">
+                  <Tag className="h-3 w-3" />
+                  {post.category}
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-xs text-charcoal-500">
+                  <Clock className="h-3 w-3" />
+                  {post.readTime}
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-xs text-charcoal-500">
+                  <CalendarDays className="h-3 w-3" />
+                  {new Date(post.publishedAt).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
+              </div>
+
+              <h1 className="text-3xl md:text-4xl font-bold text-charcoal-900 leading-tight">
+                {post.title}
+              </h1>
+
+              <p className="mt-4 text-lg text-charcoal-600 leading-relaxed">
+                {post.excerpt}
+              </p>
+            </div>
+
+            {/* Post Content */}
+            <article className="prose prose-lg prose-charcoal max-w-none prose-headings:text-charcoal-900 prose-headings:font-bold prose-a:text-gold-700 prose-a:no-underline hover:prose-a:underline prose-strong:text-charcoal-900 prose-li:text-charcoal-700">
+              <ContentComponent />
+            </article>
+
+            {/* Author / Company Card */}
+            <div className="mt-12 p-6 rounded-xl bg-charcoal-50 border border-charcoal-200">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-700 font-bold text-lg">
+                  EXT
+                </div>
+                <div>
+                  <p className="font-bold text-charcoal-900">{business.name}</p>
+                  <p className="text-sm text-charcoal-600 mt-1">
+                    Sacramento&apos;s premier permanent exterior LED lighting
+                    company. Serving {business.serviceArea.primary} and
+                    surrounding areas with professional installation and lifetime
+                    warranty.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Related Posts */}
+            {relatedPosts.length > 0 && (
+              <div className="mt-12">
+                <h2 className="text-xl font-bold text-charcoal-900 mb-6">
+                  Related Articles
+                </h2>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {relatedPosts.map((related) => (
+                    <Link
+                      key={related.slug}
+                      href={`/blog/${related.slug}`}
+                      className="group rounded-xl bg-white border border-charcoal-100 p-5 shadow-sm hover:shadow-md hover:border-gold-200 transition-all"
+                    >
+                      <span className="text-xs font-medium text-gold-700 mb-2 block">
+                        {related.category}
+                      </span>
+                      <h3 className="font-bold text-charcoal-900 group-hover:text-gold-700 transition-colors text-sm leading-snug">
+                        {related.title}
+                      </h3>
+                      <p className="text-xs text-charcoal-500 mt-2">
+                        {related.readTime}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Back to Blog */}
+            <div className="mt-10">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 text-sm font-medium text-charcoal-600 hover:text-gold-700 transition-colors"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Back to All Articles
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section bg-background">
-        <div className="container grid gap-12 lg:grid-cols-[1fr_280px]">
-          <article className="space-y-10">
-            <div className="rounded-2xl border border-charcoal-200 bg-white p-6 md:p-8">
-              <h2 className="text-xl font-semibold text-charcoal-900">Table of Contents</h2>
-              <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
-                {post.toc.map((item) => (
-                  <li key={item.id}>
-                    <a href={`#${item.id}`} className="hover:text-gold-700">
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {post.content}
-
-            <section className="rounded-2xl border border-charcoal-200 bg-white p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-charcoal-900">FAQ</h2>
-              <div className="mt-6 space-y-6">
-                {post.faqs.map((faq) => (
-                  <div key={faq.question}>
-                    <h3 className="text-lg font-semibold text-charcoal-900">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-2 text-charcoal-600">{faq.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <div className="text-sm text-charcoal-500">
-              <Link href="/blog" className="text-gold-800 font-semibold underline underline-offset-2">
-                Back to all blog posts
-              </Link>
-            </div>
-          </article>
-
-          <aside className="space-y-6">
-            <div className="rounded-2xl border border-charcoal-200 bg-white p-6">
-              <h3 className="text-lg font-semibold text-charcoal-900">Need a quote?</h3>
-              <p className="mt-2 text-sm text-charcoal-600">
-                Get a custom lighting plan and a clear proposal tailored to your
-                property in the Sacramento region.
-              </p>
-              <Link
-                href="/quote"
-                className="mt-4 inline-block text-gold-800 font-semibold underline underline-offset-2"
-              >
-                Start a free estimate
-              </Link>
-            </div>
-            <div className="rounded-2xl border border-charcoal-200 bg-white p-6">
-              <h3 className="text-lg font-semibold text-charcoal-900">Explore services</h3>
-              <ul className="mt-3 space-y-2 text-sm text-charcoal-600">
-                <li>
-                  <Link href="/services/residential" className="hover:text-gold-700">
-                    Residential permanent lighting
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/commercial" className="hover:text-gold-700">
-                    Commercial permanent lighting
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/locations" className="hover:text-gold-700">
-                    View service areas
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </section>
-
       <CTASection
-        title="Ready to upgrade your exterior lighting?"
-        subtitle="Get expert design guidance and a clear plan for your property."
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        title="Ready to See What Permanent Lighting Looks Like on Your Home?"
+        subtitle="Get a free, no-obligation quote from Sacramento's permanent lighting experts. We'll visit your property, answer all your questions, and design a custom lighting plan."
+        variant="gold"
       />
     </>
   );
