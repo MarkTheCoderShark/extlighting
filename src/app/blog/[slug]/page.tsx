@@ -9,6 +9,8 @@ import { business } from "@/lib/data/business";
 import { CostGuideContent } from "@/components/blog/cost-guide";
 import { WorthItContent } from "@/components/blog/worth-it";
 import { HowLongLastContent } from "@/components/blog/how-long-last";
+import { PermanentVsChristmasContent } from "@/components/blog/permanent-vs-christmas";
+import { InstallationProcessContent } from "@/components/blog/installation-process";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -54,6 +56,8 @@ const contentComponents: Record<string, React.ComponentType> = {
   "permanent-outdoor-lights-cost-sacramento": CostGuideContent,
   "are-permanent-outdoor-lights-worth-it": WorthItContent,
   "how-long-do-permanent-outdoor-lights-last": HowLongLastContent,
+  "permanent-outdoor-lights-vs-christmas-lights": PermanentVsChristmasContent,
+  "permanent-light-installation-process": InstallationProcessContent,
 };
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

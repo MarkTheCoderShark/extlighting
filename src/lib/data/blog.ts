@@ -90,6 +90,54 @@ export const blogPosts: BlogPost[] = [
     ogDescription:
       "How long do permanent outdoor lights really last in Sacramento's heat? Get honest lifespan data, maintenance tips, and what to look for in a durable system.",
   },
+  {
+    slug: "permanent-outdoor-lights-vs-christmas-lights",
+    title:
+      "Permanent Outdoor Lights vs. Christmas Lights: Why Sacramento Homeowners Are Switching in 2026",
+    description:
+      "A detailed comparison of permanent outdoor LED lights vs. traditional Christmas lights for Sacramento homeowners. Covers cost over time, convenience, durability, safety, and year-round value.",
+    excerpt:
+      "Tired of the annual ladder-and-tangle routine? Here's an honest side-by-side comparison of permanent outdoor lights vs. temporary Christmas lights — including the real cost math, safety data, and what Sacramento homeowners are actually choosing.",
+    publishedAt: "2026-02-25T00:00:00Z",
+    updatedAt: "2026-02-25T00:00:00Z",
+    category: "Comparison",
+    readTime: "12 min read",
+    keywords: [
+      "permanent outdoor lights vs christmas lights",
+      "permanent christmas lights comparison",
+      "permanent vs temporary outdoor lights",
+      "permanent holiday lights Sacramento",
+      "should I get permanent outdoor lights",
+    ],
+    ogTitle:
+      "Permanent Outdoor Lights vs. Christmas Lights | Sacramento Comparison Guide",
+    ogDescription:
+      "Permanent outdoor lights vs. Christmas lights — which is the smarter choice? See the full cost comparison, safety data, and what Sacramento homeowners are choosing in 2026.",
+  },
+  {
+    slug: "permanent-light-installation-process",
+    title:
+      "What to Expect When Getting Permanent Lights Installed on Your Sacramento Home",
+    description:
+      "A step-by-step guide to the permanent outdoor light installation process in Sacramento. From free consultation to installation day to app setup — everything you need to know before your appointment.",
+    excerpt:
+      "Wondering what actually happens when you get permanent lights installed? We walk through the entire process step by step — from the free property assessment to installation day to your first night with the lights on.",
+    publishedAt: "2026-02-25T00:00:00Z",
+    updatedAt: "2026-02-25T00:00:00Z",
+    category: "Installation",
+    readTime: "11 min read",
+    keywords: [
+      "permanent light installation process",
+      "how are permanent outdoor lights installed",
+      "permanent lighting installation Sacramento",
+      "what to expect permanent light installation",
+      "permanent LED light installation steps",
+    ],
+    ogTitle:
+      "Permanent Light Installation Process | Step-by-Step Sacramento Guide",
+    ogDescription:
+      "What happens during permanent light installation? Get a step-by-step walkthrough of the entire process, from consultation to installation day to your first evening.",
+  },
 ];
 
 export const getBlogPostBySlug = (
